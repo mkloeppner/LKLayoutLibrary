@@ -23,7 +23,6 @@
 		2890110519E5B37000ABA5B3 /* LKGravityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010F619E5B37000ABA5B3 /* LKGravityTests.m */; };
 		2890110619E5B37000ABA5B3 /* LKLayoutItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010F719E5B37000ABA5B3 /* LKLayoutItemTests.m */; };
 		2890110719E5B37000ABA5B3 /* LKLayoutItemTestsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010F819E5B37000ABA5B3 /* LKLayoutItemTestsSpec.m */; };
-		2890110819E5B37000ABA5B3 /* LKLayoutLibraryLayoutIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010F919E5B37000ABA5B3 /* LKLayoutLibraryLayoutIntegrationTests.m */; };
 		2890110919E5B37000ABA5B3 /* LKLayoutLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010FA19E5B37000ABA5B3 /* LKLayoutLibraryTests.m */; };
 		2890110A19E5B37000ABA5B3 /* LKLayoutParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010FB19E5B37000ABA5B3 /* LKLayoutParserTests.m */; };
 		2890110B19E5B37000ABA5B3 /* LKLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010FC19E5B37000ABA5B3 /* LKLayoutTests.m */; };
@@ -125,7 +124,6 @@
 		289010F619E5B37000ABA5B3 /* LKGravityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKGravityTests.m; sourceTree = "<group>"; };
 		289010F719E5B37000ABA5B3 /* LKLayoutItemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutItemTests.m; sourceTree = "<group>"; };
 		289010F819E5B37000ABA5B3 /* LKLayoutItemTestsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutItemTestsSpec.m; sourceTree = "<group>"; };
-		289010F919E5B37000ABA5B3 /* LKLayoutLibraryLayoutIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutLibraryLayoutIntegrationTests.m; sourceTree = "<group>"; };
 		289010FA19E5B37000ABA5B3 /* LKLayoutLibraryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutLibraryTests.m; sourceTree = "<group>"; };
 		289010FB19E5B37000ABA5B3 /* LKLayoutParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutParserTests.m; sourceTree = "<group>"; };
 		289010FC19E5B37000ABA5B3 /* LKLayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutTests.m; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 				289010F619E5B37000ABA5B3 /* LKGravityTests.m */,
 				289010F719E5B37000ABA5B3 /* LKLayoutItemTests.m */,
 				289010F819E5B37000ABA5B3 /* LKLayoutItemTestsSpec.m */,
-				289010F919E5B37000ABA5B3 /* LKLayoutLibraryLayoutIntegrationTests.m */,
 				289010FA19E5B37000ABA5B3 /* LKLayoutLibraryTests.m */,
 				289010FB19E5B37000ABA5B3 /* LKLayoutParserTests.m */,
 				289010FC19E5B37000ABA5B3 /* LKLayoutTests.m */,
@@ -487,7 +484,6 @@
 				28CA472E19E5B8F9000A632C /* LKStackLayoutItem.m in Sources */,
 				2890110A19E5B37000ABA5B3 /* LKLayoutParserTests.m in Sources */,
 				2890110D19E5B37000ABA5B3 /* LKStackLayoutTests.m in Sources */,
-				2890110819E5B37000ABA5B3 /* LKLayoutLibraryLayoutIntegrationTests.m in Sources */,
 				2890110C19E5B37000ABA5B3 /* LKLinearLayoutTests.m in Sources */,
 				2890110B19E5B37000ABA5B3 /* LKLayoutTests.m in Sources */,
 				2890110719E5B37000ABA5B3 /* LKLayoutItemTestsSpec.m in Sources */,

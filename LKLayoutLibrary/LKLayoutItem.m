@@ -39,7 +39,6 @@ const CGFloat kLKLayoutItemSizeValueMatchParent = -1.0f;
         _size = CGSizeMake(kLKLayoutItemSizeValueMatchParent, kLKLayoutItemSizeValueMatchParent);
         _padding = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f);
         _offset = UIOffsetMake(0.0f, 0.0f);
-        _insertBorder = NO;
     }
     return self;
 }

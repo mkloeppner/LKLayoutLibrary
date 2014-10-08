@@ -61,13 +61,6 @@ FOUNDATION_EXPORT const CGFloat kLKLayoutItemSizeValueMatchParent;
 @property (assign, nonatomic) UIOffset offset;
 
 /**
- * Inserts a border 
- *
- * Default: NO
- */
-@property (assign, nonatomic) BOOL insertBorder;
-
-/**
  * Can store a subview or a sublayout.
  *
  * Use the property which instance is not nil

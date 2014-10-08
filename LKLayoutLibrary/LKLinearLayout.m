@@ -76,8 +76,7 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 - (void)calculateTotalUseableContentLength
 {
     self.totalUseableContentLength = [self lengthForSize:self.contentRect.size];
-    [self reserveSpaceForSpacingArroundSeparators];
-    [self reserveSpaceForSpacingBetweenItemsWithoutSeparator];
+    [self reserveSpaceForSpacingBetweenItems];
 }
 
 - (void)iterateThroughAndPlaceItems
@@ -136,20 +135,13 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
     self.alreadyUsedLength += [self lengthForSize:self.currentItem.size];
 }
 
-- (void)reserveSpaceForSpacingArroundSeparators
+- (void)reserveSpaceForSpacingBetweenItems
 {
-    self.totalUseableContentLength -= self.numberOfSeparators * (2.0f * self.spacing); // For every separator remove spacing left and right from it
-}
-
-- (void)reserveSpaceForSpacingBetweenItemsWithoutSeparator
-{
-    self.totalUseableContentLength -= ((self.items.count - 1) - self.numberOfSeparators) * self.spacing; // For every item without separators just remove the spacing
+    self.totalUseableContentLength -= (self.items.count - 1) * self.spacing; // For every item without separators just remove the spacing
 }
 
 - (void)calculateAndSetCurrentItemsPosition
 {
-    if ([self isItemWithBorderAndNotAFirstItem]) {
-    }
     if ([self isNotFirstItem]) {
         [self movePointerBySpacing];
     }
@@ -160,11 +152,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 }
 
 #pragma mark - Third level abstraction
-- (BOOL)isItemWithBorderAndNotAFirstItem
-{
-    return self.currentItem.insertBorder && [self isNotFirstItem];
-}
-
 - (BOOL)isNotFirstItem
 {
     return self.currentIndex != 0;
@@ -249,57 +236,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 
 #pragma mark - Sixth level of abstraction
 
-
-#pragma mark - LKLayout subclass methods
-- (void)callSeparatorDelegate
-{
-    for (LKLinearLayoutItem *item in self.items) {
-        if (item.sublayout && [item.sublayout respondsToSelector:@selector(callSeparatorDelegate)]) {
-            id sublayout = item.sublayout;
-            [sublayout callSeparatorDelegate];
-        }
-    }
-}
-
-- (NSInteger)numberOfBordersForOrientation:(LKLayoutOrientation)orientation
-{
-    NSInteger numberOfSeparators = 0;
-    
-    LKLayoutOrientation separatorOrientation = [self flipOrientation:self.orientation];
-    
-    if (separatorOrientation == orientation) {
-        numberOfSeparators = MAX(0, [self numberOfSeparators]);
-    }
-    
-    for (int i = 0; i < self.items.count; i++) {
-        LKLayoutItem *item = self.items[i];
-        if (item.sublayout) {
-            LKLinearLayout *linearLayout = (LKLinearLayout *)item.sublayout;
-            numberOfSeparators += [linearLayout numberOfBordersForOrientation:orientation];
-        }
-    }
-    
-    return numberOfSeparators;
-}
-
-- (NSInteger)numberOfSeparators
-{
-    int numberOfSeparators = 0;
-    
-    for (int i = 0; i < self.items.count; i++) {
-        LKLayoutItem *item = self.items[i];
-        
-        if (i == 0) {
-            continue;
-        }
-        
-        if (item.insertBorder) {
-            numberOfSeparators += 1;
-        }
-    }
-    
-    return numberOfSeparators;
-}
 
 #pragma mark - Helper
 - (CGFloat)lengthForSize:(CGSize)size
