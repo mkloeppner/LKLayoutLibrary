@@ -7,7 +7,6 @@
 //
 
 #import "LKLayoutParser.h"
-#import "LKLayoutParserAttributeRecognizer.h"
 
 NSString *const kMKLayoutParserErrorDomain = @"MKLayoutParserErrorDomain";
 
