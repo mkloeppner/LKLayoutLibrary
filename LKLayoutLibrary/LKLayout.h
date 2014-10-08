@@ -77,7 +77,7 @@
 /**
  * The layout delegate notifies layout steps and delegate some layout calculations.
  */
-@property (strong, nonatomic) id<LKLayoutDelegate> delegate;
+@property (weak, nonatomic) id<LKLayoutDelegate> delegate;
 
 /**
  * Moves the separator creation to another instance.
