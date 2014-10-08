@@ -6,12 +6,8 @@
 //  Copyright (c) 2014 mkloeppner. All rights reserved.
 //
 
-#ifndef LKLayoutLibrary_LKLayoutLibrary_Prefix_pch
-#define LKLayoutLibrary_LKLayoutLibrary_Prefix_pch
-
 #ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
 #endif
 
-#endif
