@@ -1,12 +1,13 @@
 //
-//  MKLayoutLibrary.h
+//  LKStackLayoutItem.h
 //  MKLayoutLibrary
 //
 //  Created by Martin Klöppner on 1/11/14.
 //  Copyright (c) 2014 Martin Klöppner. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "LKLinearLayout.h"
-#import "LKStackLayout.h"
-#import "LKFlowLayout.h"
+#import "LKLayoutItem.h"
+
+@interface LKStackLayoutItem : LKLayoutItem
+
+@end

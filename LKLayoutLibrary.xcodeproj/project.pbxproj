@@ -7,8 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		286BB19D19E5B1700042CD74 /* LKLayoutLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 286BB19C19E5B1700042CD74 /* LKLayoutLibrary.h */; };
-		286BB19F19E5B1700042CD74 /* LKLayoutLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 286BB19E19E5B1700042CD74 /* LKLayoutLibrary.m */; };
+		289010E219E5B1F500ABA5B3 /* LKFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010C419E5B1F500ABA5B3 /* LKFlowLayout.m */; };
+		289010E319E5B1F500ABA5B3 /* LKFlowLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010C619E5B1F500ABA5B3 /* LKFlowLayoutItem.m */; };
+		289010E419E5B1F500ABA5B3 /* LKGravity.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010C819E5B1F500ABA5B3 /* LKGravity.m */; };
+		289010E519E5B1F500ABA5B3 /* LKLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010CB19E5B1F500ABA5B3 /* LKLayout.m */; };
+		289010E619E5B1F500ABA5B3 /* LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010CF19E5B1F500ABA5B3 /* LKLayoutItem.m */; };
+		289010E719E5B1F500ABA5B3 /* LKLayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010D319E5B1F500ABA5B3 /* LKLayoutParser.m */; };
+		289010E819E5B1F500ABA5B3 /* LKLayoutParserAttributeRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010D519E5B1F500ABA5B3 /* LKLayoutParserAttributeRecognizer.m */; };
+		289010E919E5B1F500ABA5B3 /* LKLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010D819E5B1F500ABA5B3 /* LKLayoutView.m */; };
+		289010EA19E5B1F500ABA5B3 /* LKLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010DA19E5B1F500ABA5B3 /* LKLinearLayout.m */; };
+		289010EB19E5B1F500ABA5B3 /* LKLinearLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010DC19E5B1F500ABA5B3 /* LKLinearLayoutItem.m */; };
+		289010EC19E5B1F500ABA5B3 /* LKStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010DF19E5B1F500ABA5B3 /* LKStackLayout.m */; };
+		289010ED19E5B1F500ABA5B3 /* LKStackLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010E119E5B1F500ABA5B3 /* LKStackLayoutItem.m */; };
+		289010EF19E5B21700ABA5B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289010EE19E5B21700ABA5B3 /* UIKit.framework */; };
+		289010F219E5B23D00ABA5B3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289010F119E5B23D00ABA5B3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +30,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				286BB19D19E5B1700042CD74 /* LKLayoutLibrary.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26,10 +37,43 @@
 
 /* Begin PBXFileReference section */
 		286BB19919E5B1700042CD74 /* libLKLayoutLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLKLayoutLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		286BB19C19E5B1700042CD74 /* LKLayoutLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKLayoutLibrary.h; sourceTree = "<group>"; };
-		286BB19E19E5B1700042CD74 /* LKLayoutLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKLayoutLibrary.m; sourceTree = "<group>"; };
 		286BB1A419E5B1700042CD74 /* LKLayoutLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKLayoutLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		286BB1A719E5B1700042CD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		289010C219E5B1F500ABA5B3 /* LKCGRectAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKCGRectAdditions.h; sourceTree = "<group>"; };
+		289010C319E5B1F500ABA5B3 /* LKFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKFlowLayout.h; sourceTree = "<group>"; };
+		289010C419E5B1F500ABA5B3 /* LKFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKFlowLayout.m; sourceTree = "<group>"; };
+		289010C519E5B1F500ABA5B3 /* LKFlowLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKFlowLayoutItem.h; sourceTree = "<group>"; };
+		289010C619E5B1F500ABA5B3 /* LKFlowLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKFlowLayoutItem.m; sourceTree = "<group>"; };
+		289010C719E5B1F500ABA5B3 /* LKGravity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKGravity.h; sourceTree = "<group>"; };
+		289010C819E5B1F500ABA5B3 /* LKGravity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKGravity.m; sourceTree = "<group>"; };
+		289010C919E5B1F500ABA5B3 /* LKLayout_SubclassAccessors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayout_SubclassAccessors.h; sourceTree = "<group>"; };
+		289010CA19E5B1F500ABA5B3 /* LKLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayout.h; sourceTree = "<group>"; };
+		289010CB19E5B1F500ABA5B3 /* LKLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayout.m; sourceTree = "<group>"; };
+		289010CC19E5B1F500ABA5B3 /* LKLayoutDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutDelegate.h; sourceTree = "<group>"; };
+		289010CD19E5B1F500ABA5B3 /* LKLayoutItem_SubclassAccessors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutItem_SubclassAccessors.h; sourceTree = "<group>"; };
+		289010CE19E5B1F500ABA5B3 /* LKLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutItem.h; sourceTree = "<group>"; };
+		289010CF19E5B1F500ABA5B3 /* LKLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutItem.m; sourceTree = "<group>"; };
+		289010D019E5B1F500ABA5B3 /* LKLayoutLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutLibrary.h; sourceTree = "<group>"; };
+		289010D119E5B1F500ABA5B3 /* LKLayoutOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutOrientation.h; sourceTree = "<group>"; };
+		289010D219E5B1F500ABA5B3 /* LKLayoutParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutParser.h; sourceTree = "<group>"; };
+		289010D319E5B1F500ABA5B3 /* LKLayoutParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutParser.m; sourceTree = "<group>"; };
+		289010D419E5B1F500ABA5B3 /* LKLayoutParserAttributeRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutParserAttributeRecognizer.h; sourceTree = "<group>"; };
+		289010D519E5B1F500ABA5B3 /* LKLayoutParserAttributeRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutParserAttributeRecognizer.m; sourceTree = "<group>"; };
+		289010D619E5B1F500ABA5B3 /* LKLayoutSeparatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutSeparatorDelegate.h; sourceTree = "<group>"; };
+		289010D719E5B1F500ABA5B3 /* LKLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutView.h; sourceTree = "<group>"; };
+		289010D819E5B1F500ABA5B3 /* LKLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutView.m; sourceTree = "<group>"; };
+		289010D919E5B1F500ABA5B3 /* LKLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLinearLayout.h; sourceTree = "<group>"; };
+		289010DA19E5B1F500ABA5B3 /* LKLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLinearLayout.m; sourceTree = "<group>"; };
+		289010DB19E5B1F500ABA5B3 /* LKLinearLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLinearLayoutItem.h; sourceTree = "<group>"; };
+		289010DC19E5B1F500ABA5B3 /* LKLinearLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLinearLayoutItem.m; sourceTree = "<group>"; };
+		289010DD19E5B1F500ABA5B3 /* LKLinearLayoutSeparatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLinearLayoutSeparatorDelegate.h; sourceTree = "<group>"; };
+		289010DE19E5B1F500ABA5B3 /* LKStackLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKStackLayout.h; sourceTree = "<group>"; };
+		289010DF19E5B1F500ABA5B3 /* LKStackLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKStackLayout.m; sourceTree = "<group>"; };
+		289010E019E5B1F500ABA5B3 /* LKStackLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKStackLayoutItem.h; sourceTree = "<group>"; };
+		289010E119E5B1F500ABA5B3 /* LKStackLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKStackLayoutItem.m; sourceTree = "<group>"; };
+		289010EE19E5B21700ABA5B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		289010F119E5B23D00ABA5B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		289010F319E5B26400ABA5B3 /* LKLayoutLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LKLayoutLibrary-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289010F219E5B23D00ABA5B3 /* QuartzCore.framework in Frameworks */,
+				289010EF19E5B21700ABA5B3 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +101,7 @@
 			children = (
 				286BB19B19E5B1700042CD74 /* LKLayoutLibrary */,
 				286BB1A519E5B1700042CD74 /* LKLayoutLibraryTests */,
+				289010F019E5B22600ABA5B3 /* Frameworks */,
 				286BB19A19E5B1700042CD74 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,8 +118,39 @@
 		286BB19B19E5B1700042CD74 /* LKLayoutLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				286BB19C19E5B1700042CD74 /* LKLayoutLibrary.h */,
-				286BB19E19E5B1700042CD74 /* LKLayoutLibrary.m */,
+				289010C219E5B1F500ABA5B3 /* LKCGRectAdditions.h */,
+				289010C319E5B1F500ABA5B3 /* LKFlowLayout.h */,
+				289010C419E5B1F500ABA5B3 /* LKFlowLayout.m */,
+				289010C519E5B1F500ABA5B3 /* LKFlowLayoutItem.h */,
+				289010C619E5B1F500ABA5B3 /* LKFlowLayoutItem.m */,
+				289010C719E5B1F500ABA5B3 /* LKGravity.h */,
+				289010C819E5B1F500ABA5B3 /* LKGravity.m */,
+				289010C919E5B1F500ABA5B3 /* LKLayout_SubclassAccessors.h */,
+				289010CA19E5B1F500ABA5B3 /* LKLayout.h */,
+				289010CB19E5B1F500ABA5B3 /* LKLayout.m */,
+				289010CC19E5B1F500ABA5B3 /* LKLayoutDelegate.h */,
+				289010CD19E5B1F500ABA5B3 /* LKLayoutItem_SubclassAccessors.h */,
+				289010CE19E5B1F500ABA5B3 /* LKLayoutItem.h */,
+				289010CF19E5B1F500ABA5B3 /* LKLayoutItem.m */,
+				289010D019E5B1F500ABA5B3 /* LKLayoutLibrary.h */,
+				289010D119E5B1F500ABA5B3 /* LKLayoutOrientation.h */,
+				289010D219E5B1F500ABA5B3 /* LKLayoutParser.h */,
+				289010D319E5B1F500ABA5B3 /* LKLayoutParser.m */,
+				289010D419E5B1F500ABA5B3 /* LKLayoutParserAttributeRecognizer.h */,
+				289010D519E5B1F500ABA5B3 /* LKLayoutParserAttributeRecognizer.m */,
+				289010D619E5B1F500ABA5B3 /* LKLayoutSeparatorDelegate.h */,
+				289010D719E5B1F500ABA5B3 /* LKLayoutView.h */,
+				289010D819E5B1F500ABA5B3 /* LKLayoutView.m */,
+				289010D919E5B1F500ABA5B3 /* LKLinearLayout.h */,
+				289010DA19E5B1F500ABA5B3 /* LKLinearLayout.m */,
+				289010DB19E5B1F500ABA5B3 /* LKLinearLayoutItem.h */,
+				289010DC19E5B1F500ABA5B3 /* LKLinearLayoutItem.m */,
+				289010DD19E5B1F500ABA5B3 /* LKLinearLayoutSeparatorDelegate.h */,
+				289010DE19E5B1F500ABA5B3 /* LKStackLayout.h */,
+				289010DF19E5B1F500ABA5B3 /* LKStackLayout.m */,
+				289010E019E5B1F500ABA5B3 /* LKStackLayoutItem.h */,
+				289010E119E5B1F500ABA5B3 /* LKStackLayoutItem.m */,
+				289010F319E5B26400ABA5B3 /* LKLayoutLibrary-Prefix.pch */,
 			);
 			path = LKLayoutLibrary;
 			sourceTree = "<group>";
@@ -91,6 +169,15 @@
 				286BB1A719E5B1700042CD74 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		289010F019E5B22600ABA5B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				289010F119E5B23D00ABA5B3 /* QuartzCore.framework */,
+				289010EE19E5B21700ABA5B3 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +267,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				286BB19F19E5B1700042CD74 /* LKLayoutLibrary.m in Sources */,
+				289010EB19E5B1F500ABA5B3 /* LKLinearLayoutItem.m in Sources */,
+				289010E419E5B1F500ABA5B3 /* LKGravity.m in Sources */,
+				289010E919E5B1F500ABA5B3 /* LKLayoutView.m in Sources */,
+				289010E219E5B1F500ABA5B3 /* LKFlowLayout.m in Sources */,
+				289010ED19E5B1F500ABA5B3 /* LKStackLayoutItem.m in Sources */,
+				289010EA19E5B1F500ABA5B3 /* LKLinearLayout.m in Sources */,
+				289010E619E5B1F500ABA5B3 /* LKLayoutItem.m in Sources */,
+				289010E819E5B1F500ABA5B3 /* LKLayoutParserAttributeRecognizer.m in Sources */,
+				289010E719E5B1F500ABA5B3 /* LKLayoutParser.m in Sources */,
+				289010E519E5B1F500ABA5B3 /* LKLayout.m in Sources */,
+				289010E319E5B1F500ABA5B3 /* LKFlowLayoutItem.m in Sources */,
+				289010EC19E5B1F500ABA5B3 /* LKStackLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +314,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "LKLayoutLibrary/LKLayoutLibrary-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -255,6 +354,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = "LKLayoutLibrary/LKLayoutLibrary-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -335,6 +435,7 @@
 				286BB1AC19E5B1700042CD74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		286BB1AD19E5B1700042CD74 /* Build configuration list for PBXNativeTarget "LKLayoutLibraryTests" */ = {
 			isa = XCConfigurationList;
@@ -343,6 +444,7 @@
 				286BB1AF19E5B1700042CD74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
