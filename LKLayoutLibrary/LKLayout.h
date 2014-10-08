@@ -196,13 +196,6 @@
  */
 - (void)layoutBounds:(CGRect)bounds;
 
-
-#pragma mark - Border API
-/**
- * Returns the amount of separators for a specific orientation
- */
-- (NSInteger)numberOfBordersForOrientation:(LKLayoutOrientation)orientation;
-
 /**
  * Flips the orientation to the opposit
  */

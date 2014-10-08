@@ -11,7 +11,6 @@
 
 @interface LKLinearLayout ()
 
-@property (strong, nonatomic) NSMutableArray *separators;
 @property (assign, nonatomic) CGRect contentRect;
 @property (assign, nonatomic) CGFloat currentPos;
 @property (assign, nonatomic) CGFloat overallWeight;
@@ -33,7 +32,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
     if (self) {
         self.spacing = 0.0f;
         self.orientation = LKLayoutOrientationHorizontal;
-        self.separators = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -54,7 +52,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 {
     [self resetCurrentPointer];
     [self resetGlobalLayoutValues];
-    [self resetSeparatorInformation];
 }
 
 /**
@@ -97,11 +94,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
     self.alreadyUsedLength = 0.0f;
 }
 
-- (void)resetSeparatorInformation
-{
-    self.separators = [[NSMutableArray alloc] init];
-}
-
 - (void)forEachItem:(void (^)(void))block
 {
     __strong void (^execBlock)(void) = block;
@@ -137,7 +129,8 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 
 - (void)reserveSpaceForSpacingBetweenItems
 {
-    self.totalUseableContentLength -= (self.items.count - 1) * self.spacing; // For every item without separators just remove the spacing
+    NSUInteger spacerCount = self.items.count - 1;
+    self.totalUseableContentLength -= spacerCount * self.spacing;
 }
 
 - (void)calculateAndSetCurrentItemsPosition
