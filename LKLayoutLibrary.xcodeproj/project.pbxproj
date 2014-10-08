@@ -146,6 +146,7 @@
 		2890110219E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLinearLayoutSeparatorImpl.h; sourceTree = "<group>"; };
 		2890110319E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLinearLayoutSeparatorImpl.m; sourceTree = "<group>"; };
 		28CA46EA19E5B747000A632C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		28CA473319E5BB8C000A632C /* LKLayoutLibrary.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = LKLayoutLibrary.podspec; path = ../LKLayoutLibrary.podspec; sourceTree = "<group>"; };
 		8A572D31A18DB80572480AB3 /* Pods-LKLayoutLibraryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKLayoutLibraryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C02B4E20370A4D4493279D1A /* libPods-LKLayoutLibraryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LKLayoutLibraryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F805C64C1CDF4D4AADD74EE9 /* Pods-LKLayoutLibraryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKLayoutLibraryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +207,7 @@
 		286BB19B19E5B1700042CD74 /* LKLayoutLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				28CA473319E5BB8C000A632C /* LKLayoutLibrary.podspec */,
 				289010D019E5B1F500ABA5B3 /* LKLayoutLibrary.h */,
 				289010C719E5B1F500ABA5B3 /* LKGravity.h */,
 				289010C819E5B1F500ABA5B3 /* LKGravity.m */,
