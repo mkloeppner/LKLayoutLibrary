@@ -9,14 +9,14 @@
 #import "LKLinearLayoutItem.h"
 #import "LKLayoutItem_SubclassAccessors.h"
 
-const CGFloat kMKLinearLayoutWeightInvalid = -1.0f;
+const CGFloat kLKLinearLayoutWeightInvalid = -1.0f;
 
 @implementation LKLinearLayoutItem
 
 - (instancetype)initWithLayout:(LKLayout *)layout
 {
     LKLinearLayoutItem *layoutItem = [super initWithLayout:layout];
-    layoutItem.weight = kMKLinearLayoutWeightInvalid;
+    layoutItem.weight = kLKLinearLayoutWeightInvalid;
     return layoutItem;
 }
 

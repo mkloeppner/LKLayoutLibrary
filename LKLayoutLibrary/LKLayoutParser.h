@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LKLayoutLibrary.h"
 
-extern NSString *const kMKLayoutParserErrorDomain;
+extern NSString *const kLKLayoutParserErrorDomain;
 
 typedef enum {
     LKLayoutParserUnsupportedAttributeError

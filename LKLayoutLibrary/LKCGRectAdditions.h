@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Martin Klöppner. All rights reserved.
 //
 
-#ifndef LKLayoutLibrary_MKCGRectAdditions_h
-#define LKLayoutLibrary_MKCGRectAdditions_h
+#ifndef LKLayoutLibrary_LKCGRectAdditions_h
+#define LKLayoutLibrary_LKCGRectAdditions_h
 
 static inline CGRect CGRectMoveHorizontallyToCenterWithinRect(CGRect rect, CGRect outerRect) {
     return CGRectMake(outerRect.size.width / 2.0f - rect.size.width / 2.0f + outerRect.origin.x,

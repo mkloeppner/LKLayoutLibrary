@@ -8,7 +8,7 @@
 
 #import "LKLayoutItem.h"
 
-FOUNDATION_EXPORT const CGFloat kMKLinearLayoutWeightInvalid;
+FOUNDATION_EXPORT const CGFloat kLKLinearLayoutWeightInvalid;
 
 @interface LKLinearLayoutItem : LKLayoutItem
 

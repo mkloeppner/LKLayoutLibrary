@@ -8,7 +8,7 @@
 
 #import "LKLayoutParser.h"
 
-NSString *const kMKLayoutParserErrorDomain = @"MKLayoutParserErrorDomain";
+NSString *const kLKLayoutParserErrorDomain = @"MKLayoutParserErrorDomain";
 
 @interface LKLayoutParser () <NSXMLParserDelegate>
 

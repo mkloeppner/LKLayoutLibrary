@@ -122,7 +122,7 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 
 - (BOOL)isCurrentItemAnWeightItem
 {
-    return self.currentItem.weight != kMKLinearLayoutWeightInvalid;
+    return self.currentItem.weight != kLKLinearLayoutWeightInvalid;
 }
 
 - (void)increaseOverallWeightWithItemOnes
