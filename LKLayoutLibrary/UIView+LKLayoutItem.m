@@ -9,18 +9,18 @@
 #import "UIView+LKLayoutItem.h"
 #import <objc/runtime.h>
 
-static char const * const kMKLayoutItemUIViewAssociatedLayoutItemKey = "io.github.mkloeppner.kLKLayoutItemUIViewAssociatedLayoutItemKey";
+static char const * const kLKLayoutItemUIViewAssociatedLayoutItemKey = "io.github.mkloeppner.kLKLayoutItemUIViewAssociatedLayoutItemKey";
 
 @implementation UIView (LKLayoutItem)
 
 - (void)setItem:(LKLayoutItem *)item
 {
-    objc_setAssociatedObject(self, kMKLayoutItemUIViewAssociatedLayoutItemKey, item, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, kLKLayoutItemUIViewAssociatedLayoutItemKey, item, OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (LKLayoutItem *)item
 {
-    return objc_getAssociatedObject(self, kMKLayoutItemUIViewAssociatedLayoutItemKey);
+    return objc_getAssociatedObject(self, kLKLayoutItemUIViewAssociatedLayoutItemKey);
 }
 
 @end
