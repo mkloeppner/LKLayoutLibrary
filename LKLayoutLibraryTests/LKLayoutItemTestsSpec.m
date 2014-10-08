@@ -41,8 +41,7 @@ describe(@"LKLayoutItemTests", ^{
     
     it(@"should provide a userInfo dictionary in order to allow introspection", ^{
         
-        NSDictionary *userInf#0	0x0000000108549076 in __39-[LKLayoutItemTestsSpec spt_defineSpec]_block_invoke67 at /Users/martinkloeppner/Desktop/LKLayoutLibrary/LKLayoutLibraryTests/LKLayoutItemTestsSpec.m:72
-o = @{@"test": @"test"};
+        NSDictionary *userInfo = @{@"test": @"test"};
         
         LKLayoutItem *layoutItem = [layout addSubview:subview1];
         layoutItem.userInfo = userInfo;
