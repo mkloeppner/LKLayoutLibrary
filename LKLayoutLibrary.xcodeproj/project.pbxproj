@@ -206,38 +206,24 @@
 		286BB19B19E5B1700042CD74 /* LKLayoutLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				289010C219E5B1F500ABA5B3 /* LKCGRectAdditions.h */,
-				289010C319E5B1F500ABA5B3 /* LKFlowLayout.h */,
-				289010C419E5B1F500ABA5B3 /* LKFlowLayout.m */,
-				289010C519E5B1F500ABA5B3 /* LKFlowLayoutItem.h */,
-				289010C619E5B1F500ABA5B3 /* LKFlowLayoutItem.m */,
+				289010D019E5B1F500ABA5B3 /* LKLayoutLibrary.h */,
 				289010C719E5B1F500ABA5B3 /* LKGravity.h */,
 				289010C819E5B1F500ABA5B3 /* LKGravity.m */,
-				289010C919E5B1F500ABA5B3 /* LKLayout_SubclassAccessors.h */,
-				289010CA19E5B1F500ABA5B3 /* LKLayout.h */,
-				289010CB19E5B1F500ABA5B3 /* LKLayout.m */,
-				289010CC19E5B1F500ABA5B3 /* LKLayoutDelegate.h */,
 				289010CD19E5B1F500ABA5B3 /* LKLayoutItem_SubclassAccessors.h */,
 				289010CE19E5B1F500ABA5B3 /* LKLayoutItem.h */,
 				289010CF19E5B1F500ABA5B3 /* LKLayoutItem.m */,
-				289010D019E5B1F500ABA5B3 /* LKLayoutLibrary.h */,
+				289010C919E5B1F500ABA5B3 /* LKLayout_SubclassAccessors.h */,
+				289010CA19E5B1F500ABA5B3 /* LKLayout.h */,
+				289010CB19E5B1F500ABA5B3 /* LKLayout.m */,
+				289010C219E5B1F500ABA5B3 /* LKCGRectAdditions.h */,
+				289010CC19E5B1F500ABA5B3 /* LKLayoutDelegate.h */,
 				289010D119E5B1F500ABA5B3 /* LKLayoutOrientation.h */,
-				289010D219E5B1F500ABA5B3 /* LKLayoutParser.h */,
-				289010D319E5B1F500ABA5B3 /* LKLayoutParser.m */,
-				289010D419E5B1F500ABA5B3 /* LKLayoutParserAttributeRecognizer.h */,
-				289010D519E5B1F500ABA5B3 /* LKLayoutParserAttributeRecognizer.m */,
 				289010D619E5B1F500ABA5B3 /* LKLayoutSeparatorDelegate.h */,
 				289010D719E5B1F500ABA5B3 /* LKLayoutView.h */,
 				289010D819E5B1F500ABA5B3 /* LKLayoutView.m */,
-				289010D919E5B1F500ABA5B3 /* LKLinearLayout.h */,
-				289010DA19E5B1F500ABA5B3 /* LKLinearLayout.m */,
-				289010DB19E5B1F500ABA5B3 /* LKLinearLayoutItem.h */,
-				289010DC19E5B1F500ABA5B3 /* LKLinearLayoutItem.m */,
-				289010DD19E5B1F500ABA5B3 /* LKLinearLayoutSeparatorDelegate.h */,
-				289010DE19E5B1F500ABA5B3 /* LKStackLayout.h */,
-				289010DF19E5B1F500ABA5B3 /* LKStackLayout.m */,
-				289010E019E5B1F500ABA5B3 /* LKStackLayoutItem.h */,
-				289010E119E5B1F500ABA5B3 /* LKStackLayoutItem.m */,
+				28CA473119E5BA47000A632C /* Utils */,
+				28CA473019E5B9F4000A632C /* LayoutItems */,
+				28CA472F19E5B9D3000A632C /* Layouts */,
 				289010F419E5B32B00ABA5B3 /* Supporting Files */,
 			);
 			path = LKLayoutLibrary;
@@ -298,6 +284,52 @@
 				2890110319E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m */,
 			);
 			path = MockObjects;
+			sourceTree = "<group>";
+		};
+		28CA472F19E5B9D3000A632C /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				289010DD19E5B1F500ABA5B3 /* LKLinearLayoutSeparatorDelegate.h */,
+				289010D919E5B1F500ABA5B3 /* LKLinearLayout.h */,
+				289010DA19E5B1F500ABA5B3 /* LKLinearLayout.m */,
+				289010C319E5B1F500ABA5B3 /* LKFlowLayout.h */,
+				289010C419E5B1F500ABA5B3 /* LKFlowLayout.m */,
+				289010DE19E5B1F500ABA5B3 /* LKStackLayout.h */,
+				289010DF19E5B1F500ABA5B3 /* LKStackLayout.m */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+		28CA473019E5B9F4000A632C /* LayoutItems */ = {
+			isa = PBXGroup;
+			children = (
+				289010DB19E5B1F500ABA5B3 /* LKLinearLayoutItem.h */,
+				289010DC19E5B1F500ABA5B3 /* LKLinearLayoutItem.m */,
+				289010C519E5B1F500ABA5B3 /* LKFlowLayoutItem.h */,
+				289010C619E5B1F500ABA5B3 /* LKFlowLayoutItem.m */,
+				289010E019E5B1F500ABA5B3 /* LKStackLayoutItem.h */,
+				289010E119E5B1F500ABA5B3 /* LKStackLayoutItem.m */,
+			);
+			name = LayoutItems;
+			sourceTree = "<group>";
+		};
+		28CA473119E5BA47000A632C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				28CA473219E5BA64000A632C /* Parser */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		28CA473219E5BA64000A632C /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				289010D219E5B1F500ABA5B3 /* LKLayoutParser.h */,
+				289010D319E5B1F500ABA5B3 /* LKLayoutParser.m */,
+				289010D419E5B1F500ABA5B3 /* LKLayoutParserAttributeRecognizer.h */,
+				289010D519E5B1F500ABA5B3 /* LKLayoutParserAttributeRecognizer.m */,
+			);
+			name = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
