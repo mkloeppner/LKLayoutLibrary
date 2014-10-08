@@ -7,7 +7,7 @@
 //
 
 #import "LKLayout.h"
-#import "LKGravity.h"
+#import "UIView_LKLayoutItemInternalAPI.h"
 
 @interface LKLayout ()
 
@@ -80,6 +80,7 @@
     
     if (layoutItem.subview) {
         [self.view addSubview:layoutItem.subview];
+        layoutItem.subview.item = layoutItem;
     }
     if (layoutItem.sublayout) {
         layoutItem.sublayout.item = layoutItem;
@@ -100,6 +101,9 @@
     
     LKLayoutItem *item = self.items[index];
     [self.mutableItems removeObjectAtIndex:index];
+
+    item.subview.item = nil;
+
     if ([self.delegate respondsToSelector:@selector(layout:didRemoveLayoutItem:)]) {
         [self.delegate layout:self didRemoveLayoutItem:item];
     }

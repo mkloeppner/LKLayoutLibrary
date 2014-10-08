@@ -167,7 +167,7 @@
 /**
  *  Inserts a layout item at the end of the layout
  *
- *  @param layoutItem the item, that will be added at the end of the layout
+ *  @param item the item, that will be added at the end of the layout
  */
 - (void)addLayoutItem:(LKLayoutItem *)layoutItem;
 
@@ -176,7 +176,7 @@
  *
  * Additionally it removes its assoicated view, if its a view layout item or its associated sublayout views if its a sublayout item.
  *
- *  @param layoutItem The layout item to be removed from the layout
+ *  @param item The layout item to be removed from the layout
  */
 - (void)removeLayoutItem:(LKLayoutItem *)layoutItem;
 

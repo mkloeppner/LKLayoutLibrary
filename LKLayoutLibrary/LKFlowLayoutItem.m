@@ -7,7 +7,6 @@
 //
 
 #import "LKFlowLayoutItem.h"
-#import "LKLayoutItem_SubclassAccessors.h"
 
 @implementation LKFlowLayoutItem
 

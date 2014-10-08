@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CEBA97871292E15812217A0 /* UIView+LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */; };
+		1CEBAF448F3E880370EF021F /* UIView+LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */; };
 		289010E219E5B1F500ABA5B3 /* LKFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010C419E5B1F500ABA5B3 /* LKFlowLayout.m */; };
 		289010E319E5B1F500ABA5B3 /* LKFlowLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010C619E5B1F500ABA5B3 /* LKFlowLayoutItem.m */; };
 		289010E419E5B1F500ABA5B3 /* LKGravity.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010C819E5B1F500ABA5B3 /* LKGravity.m */; };
@@ -86,6 +88,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1CEBA8A225539CCA64B1CA39 /* UIView+LKLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LKLayoutItem.h"; sourceTree = "<group>"; };
+		1CEBACC9467BF7663E1C33A2 /* UIView_LKLayoutItemInternalAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_LKLayoutItemInternalAPI.h; sourceTree = "<group>"; };
+		1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LKLayoutItem.m"; sourceTree = "<group>"; };
 		286BB19919E5B1700042CD74 /* libLKLayoutLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLKLayoutLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		286BB1A419E5B1700042CD74 /* LKLayoutLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKLayoutLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		286BB1A719E5B1700042CD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -212,6 +217,9 @@
 				28CA473019E5B9F4000A632C /* LayoutItems */,
 				28CA472F19E5B9D3000A632C /* Layouts */,
 				289010F419E5B32B00ABA5B3 /* Supporting Files */,
+				1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */,
+				1CEBACC9467BF7663E1C33A2 /* UIView_LKLayoutItemInternalAPI.h */,
+				1CEBA8A225539CCA64B1CA39 /* UIView+LKLayoutItem.h */,
 			);
 			path = LKLayoutLibrary;
 			sourceTree = "<group>";
@@ -447,6 +455,7 @@
 				289010E519E5B1F500ABA5B3 /* LKLayout.m in Sources */,
 				289010E319E5B1F500ABA5B3 /* LKFlowLayoutItem.m in Sources */,
 				289010EC19E5B1F500ABA5B3 /* LKStackLayout.m in Sources */,
+				1CEBA97871292E15812217A0 /* UIView+LKLayoutItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +501,7 @@
 				2890110919E5B37000ABA5B3 /* LKLayoutLibraryTests.m in Sources */,
 				2890110519E5B37000ABA5B3 /* LKGravityTests.m in Sources */,
 				2890110E19E5B37000ABA5B3 /* LKLayoutDelegateImpl.m in Sources */,
+				1CEBAF448F3E880370EF021F /* UIView+LKLayoutItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

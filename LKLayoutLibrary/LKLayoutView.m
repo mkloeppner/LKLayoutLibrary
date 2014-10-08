@@ -7,7 +7,6 @@
 //
 
 #import "LKLayoutView.h"
-#import "LKLayoutParser.h"
 
 @implementation LKLayoutView
 

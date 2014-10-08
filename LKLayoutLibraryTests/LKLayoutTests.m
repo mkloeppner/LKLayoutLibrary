@@ -15,6 +15,8 @@
 #define MOCKITO_SHORTHAND
 #import "OCMockito.h"
 
+#import "UIView+LKLayoutItem.h"
+
 @interface LKLayout (APIAccessors)
 
 - (void)layoutItemWantsRemoval:(LKLayoutItem *)item;
@@ -145,7 +147,7 @@ describe(@"LKLayout", ^{
     it(@"should return a specified userInfo for meta data", ^{
         UIView *childView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 10.0f, 10.0f)];
         LKLayoutItem *layoutItem = [layout addSubview:childView];
-        NSDictionary *userInfo = @{@"name": @"layoutItem"};
+        NSDictionary *userInfo = @{@"name": @"item"};
         layoutItem.userInfo = userInfo;
         
         expect(layout.items.count).to.equal(1);
@@ -295,10 +297,9 @@ describe(@"LKLayout", ^{
         // Is it inserted in the new layout
         expect(layout.items.count).to.equal(1);
         expect(layout.items[0]).to.equal(item);
-    
+        
         // Does it changed it superview
         expect(item.subview.superview).to.equal(container);
-    
         
     });
     
@@ -335,6 +336,90 @@ describe(@"LKLayout", ^{
         
     });
     
+    it(@"should not assign a layout item to a view if its not added", ^{
+        
+        UIView *childView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 10.0f, 10.0f)];
+        
+        expect(childView.item).to.equal(nil);
+        
+    });
+    
+    it(@"should assign a layout item to view with adding a subview", ^{
+        
+        UIView *childView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 10.0f, 10.0f)];
+        LKLayoutItem *layoutItem = [layout addSubview:childView];
+        
+        expect(childView.item).to.equal(layoutItem);
+        
+    });
+    
+    it(@"should assign the layout item to the given view with adding by inserting", ^{
+        
+        UIView *childView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 10.0f, 10.0f)];
+        LKLayoutItem *layoutItem = [layout insertSubview:childView atIndex:0];
+        
+        expect(childView.item).to.equal(layoutItem);
+        
+    });
+    
+    it(@"should un-assign the layout item from the view with removing the object via layout items removeFromParent", ^{
+        
+        UIView *childView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 10.0f, 10.0f)];
+        LKLayoutItem *layoutItem = [layout addSubview:childView];
+        
+        [layoutItem removeFromLayout];
+        
+        expect(childView.item).to.equal(nil);
+        
+    });
+    
+    it(@"should un-assign the layout item from the view with removing the object from layout", ^{
+        
+        UIView *childView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 10.0f, 10.0f)];
+        LKLayoutItem *layoutItem = [layout addSubview:childView];
+        
+        [layout removeLayoutItem:layoutItem];
+        
+        expect(childView.item).to.equal(nil);
+        
+    });
+    
+    it(@"should un-assign the layout item from the view with removing the object by index", ^{
+        
+        UIView *childView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 10.0f, 10.0f)];
+        [layout addSubview:childView];
+        
+        [layout removeLayoutItemAtIndex:0];
+        
+        expect(childView.item).to.equal(nil);
+        
+    });
+    
+    it(@"should un-assign the layout item from the view with removing the object by clearing", ^{
+        
+        UIView *childView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 10.0f, 10.0f)];
+        [layout addSubview:childView];
+        
+        [layout clear];
+        
+        expect(childView.item).to.equal(nil);
+        
+    });
+    
+    it(@"should re-assign the layout item from the view with removing the object", ^{
+        
+        UIView *childView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 10.0f, 10.0f)];
+        LKLayoutItem *layoutItem = [layout addSubview:childView];
+        
+        [layoutItem removeFromLayout];
+        
+        expect(childView.item).to.equal(nil);
+        
+        [layout addLayoutItem:layoutItem];
+        
+        expect(childView.item).to.equal(layoutItem);
+        
+    });
     
 });
 
