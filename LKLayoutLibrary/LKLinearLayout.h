@@ -8,7 +8,6 @@
 
 #import "LKLayout.h"
 #import "LKLinearLayoutItem.h"
-#import "LKLinearLayoutSeparatorDelegate.h"
 
 /**
  *  A linear layout places all its children view side by side in a specified direction.
@@ -29,9 +28,5 @@ DECLARE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
  */
 @property (assign, nonatomic) LKLayoutOrientation orientation;
 
-/**
- * Separator delegate allows delegate to insert separator images.
- */
-@property (assign, nonatomic) id<LKLinearLayoutSeparatorDelegate> separatorDelegate;
 
 @end

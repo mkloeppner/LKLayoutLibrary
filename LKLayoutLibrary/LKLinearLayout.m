@@ -7,7 +7,6 @@
 //
 
 #import "LKLinearLayout.h"
-#import "LKLinearLayoutSeparatorDelegate.h"
 #import "LKLayout_SubclassAccessors.h"
 
 @interface LKLinearLayout ()
@@ -17,13 +16,10 @@
 @property (assign, nonatomic) CGFloat currentPos;
 @property (assign, nonatomic) CGFloat overallWeight;
 @property (assign, nonatomic) CGFloat alreadyUsedLength;
-@property (assign, nonatomic) CGFloat separatorThickness;
-@property (assign, nonatomic) NSInteger numberOfSeparators;
 @property (assign, nonatomic) CGFloat totalUseableContentLength;
 @property (assign, nonatomic) NSInteger currentIndex;
 @property (strong, nonatomic) LKLinearLayoutItem *currentItem;
 @property (assign, nonatomic) CGFloat currentItemLength;
-@property (assign, nonatomic) UIEdgeInsets separatorIntersectionOffsets;
 
 @end
 
@@ -80,7 +76,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 - (void)calculateTotalUseableContentLength
 {
     self.totalUseableContentLength = [self lengthForSize:self.contentRect.size];
-    [self reserveSeparatorSpaceForItems];
     [self reserveSpaceForSpacingArroundSeparators];
     [self reserveSpaceForSpacingBetweenItemsWithoutSeparator];
 }
@@ -106,8 +101,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 - (void)resetSeparatorInformation
 {
     self.separators = [[NSMutableArray alloc] init];
-    self.separatorThickness = [self.separatorDelegate separatorThicknessForLinearLayout:self];
-    self.numberOfSeparators = [self numberOfSeparators];
 }
 
 - (void)forEachItem:(void (^)(void))block
@@ -143,11 +136,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
     self.alreadyUsedLength += [self lengthForSize:self.currentItem.size];
 }
 
-- (void)reserveSeparatorSpaceForItems
-{
-    self.totalUseableContentLength -= self.numberOfSeparators * self.separatorThickness; // Remove separator thicknesses to keep space for separators
-}
-
 - (void)reserveSpaceForSpacingArroundSeparators
 {
     self.totalUseableContentLength -= self.numberOfSeparators * (2.0f * self.spacing); // For every separator remove spacing left and right from it
@@ -161,15 +149,10 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 - (void)calculateAndSetCurrentItemsPosition
 {
     if ([self isItemWithBorderAndNotAFirstItem]) {
-        [self movePointerBySeparatorThickness];
     }
     if ([self isNotFirstItem]) {
         [self movePointerBySpacing];
     }
-    if ([self isItemWithBorderAndNotAFirstItem] && [self doesDelegateRespondsToCreateSelector]) {
-        [self addSeparator];
-        [self movePointerBySpacing];
-    };
     
     [self placeCurrentItem];
     [self movePointerWithItem];
@@ -182,11 +165,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
     return self.currentItem.insertBorder && [self isNotFirstItem];
 }
 
-- (void)movePointerBySeparatorThickness
-{
-    self.currentPos += self.separatorThickness;
-}
-
 - (BOOL)isNotFirstItem
 {
     return self.currentIndex != 0;
@@ -195,20 +173,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 - (void)movePointerBySpacing
 {
     self.currentPos += self.spacing;
-}
-
-- (BOOL)doesDelegateRespondsToCreateSelector
-{
-    return [self.separatorDelegate respondsToSelector:@selector(linearLayout:separatorRect:type:)];
-}
-
-- (void)addSeparator
-{
-    [self askDelegateForGlobalSeparatorSettings];
-    
-    CGRect separatorRect = [self separatorRect];
-    
-    [self.separators addObject:[NSValue valueWithCGRect:[self roundedRect:separatorRect]]];
 }
 
 - (void)placeCurrentItem
@@ -223,26 +187,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 }
 
 #pragma mark - Fourth level abstraction
-- (void)askDelegateForGlobalSeparatorSettings
-{
-    self.separatorIntersectionOffsets = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f);
-    
-    if ([self.separatorDelegate respondsToSelector:@selector(separatorIntersectionOffsetsForLinearLayout:)]) {
-        self.separatorIntersectionOffsets = [self.separatorDelegate separatorIntersectionOffsetsForLinearLayout:self];
-    }
-}
-
-- (CGRect)separatorRect
-{
-    CGRect separatorRect = CGRectZero;
-    if (self.orientation == LKLayoutOrientationHorizontal) {
-        separatorRect = [self currentSeparatorRectForHorizontalOrientation];
-    } else {
-        separatorRect = [self currentSeparatorRectForVerticalOrientation];
-    }
-    return separatorRect;
-}
-
 - (void)calculateCurrentItemLength
 {
     self.currentItemLength = 0.0f;
@@ -268,26 +212,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 }
 
 #pragma mark - Fith level abstraction
-- (CGRect)currentSeparatorRectForHorizontalOrientation
-{
-    CGFloat positionX = self.contentRect.origin.x + self.currentPos - self.separatorThickness;
-    CGFloat positionY = self.contentRect.origin.y - self.separatorIntersectionOffsets.top;
-    CGFloat width = self.separatorThickness;
-    CGFloat height = self.contentRect.size.height + self.separatorIntersectionOffsets.top + self.separatorIntersectionOffsets.bottom;
-    
-    return CGRectMake(positionX, positionY, width, height);
-}
-
-- (CGRect)currentSeparatorRectForVerticalOrientation
-{
-    CGFloat positionX = self.contentRect.origin.x - self.separatorIntersectionOffsets.left;
-    CGFloat positionY = self.contentRect.origin.y + self.currentPos - self.separatorThickness;
-    CGFloat width = self.contentRect.size.width + self.separatorIntersectionOffsets.left + self.separatorIntersectionOffsets.right;
-    CGFloat height = self.separatorThickness;
-    
-    return CGRectMake(positionX, positionY, width, height);
-}
-
 - (void)setCurrentItemLengthByWeight
 {
     self.currentItemLength = self.currentItem.weight / self.overallWeight * (self.totalUseableContentLength - self.alreadyUsedLength);
@@ -329,11 +253,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 #pragma mark - LKLayout subclass methods
 - (void)callSeparatorDelegate
 {
-    if (self.separatorDelegate) {
-        for (NSValue *value in self.separators) {
-            [self.separatorDelegate linearLayout:self separatorRect:value.CGRectValue type:[self flipOrientation:self.orientation]];
-        }
-    }
     for (LKLinearLayoutItem *item in self.items) {
         if (item.sublayout && [item.sublayout respondsToSelector:@selector(callSeparatorDelegate)]) {
             id sublayout = item.sublayout;

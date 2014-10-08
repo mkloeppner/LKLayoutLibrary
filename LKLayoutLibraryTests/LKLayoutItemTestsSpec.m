@@ -8,7 +8,6 @@
 
 #import "Specta.h"
 #import "LKLayout.h"
-#import "LKLinearLayoutSeparatorImpl.h"
 #import "LKLayoutDelegateImpl.h"
 
 #define EXP_SHORTHAND
@@ -80,22 +79,6 @@ describe(@"LKLayoutItemTests", ^{
         }
         
         expect(layout.delegate).to.equal(nil);
-        
-    });
-    
-    it(@"should not retain its layout delegate since its holding the layout", ^{
-        
-        __weak LKLinearLayoutSeparatorImpl *weakInstanceOfLayoutDelegate = nil;
-        __strong LKLayout *layout = [[LKLayout alloc] init];
-        
-        @autoreleasepool {
-            LKLinearLayoutSeparatorImpl *createdInstanceOfLayoutDelegate = [[LKLinearLayoutSeparatorImpl alloc] init];
-            weakInstanceOfLayoutDelegate = createdInstanceOfLayoutDelegate;
-            
-            layout.separatorDelegate = weakInstanceOfLayoutDelegate;
-        }
-        
-        expect(layout.separatorDelegate).to.equal(nil);
         
     });
     

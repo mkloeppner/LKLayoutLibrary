@@ -30,7 +30,6 @@
 		2890110C19E5B37000ABA5B3 /* LKLinearLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010FD19E5B37000ABA5B3 /* LKLinearLayoutTests.m */; };
 		2890110D19E5B37000ABA5B3 /* LKStackLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010FE19E5B37000ABA5B3 /* LKStackLayoutTests.m */; };
 		2890110E19E5B37000ABA5B3 /* LKLayoutDelegateImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2890110119E5B37000ABA5B3 /* LKLayoutDelegateImpl.m */; };
-		2890110F19E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2890110319E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m */; };
 		28CA46E919E5B741000A632C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289010EE19E5B21700ABA5B3 /* UIKit.framework */; };
 		28CA46EB19E5B747000A632C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CA46EA19E5B747000A632C /* Foundation.framework */; };
 		28CA46EC19E5B7B7000A632C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CA46EA19E5B747000A632C /* Foundation.framework */; };
@@ -52,14 +51,12 @@
 		28CA471E19E5B8F9000A632C /* LKLayoutOrientation.h in Sources */ = {isa = PBXBuildFile; fileRef = 289010D119E5B1F500ABA5B3 /* LKLayoutOrientation.h */; };
 		28CA471F19E5B8F9000A632C /* LKLayoutParser.h in Sources */ = {isa = PBXBuildFile; fileRef = 289010D219E5B1F500ABA5B3 /* LKLayoutParser.h */; };
 		28CA472019E5B8F9000A632C /* LKLayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010D319E5B1F500ABA5B3 /* LKLayoutParser.m */; };
-		28CA472319E5B8F9000A632C /* LKLayoutSeparatorDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 289010D619E5B1F500ABA5B3 /* LKLayoutSeparatorDelegate.h */; };
 		28CA472419E5B8F9000A632C /* LKLayoutView.h in Sources */ = {isa = PBXBuildFile; fileRef = 289010D719E5B1F500ABA5B3 /* LKLayoutView.h */; };
 		28CA472519E5B8F9000A632C /* LKLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010D819E5B1F500ABA5B3 /* LKLayoutView.m */; };
 		28CA472619E5B8F9000A632C /* LKLinearLayout.h in Sources */ = {isa = PBXBuildFile; fileRef = 289010D919E5B1F500ABA5B3 /* LKLinearLayout.h */; };
 		28CA472719E5B8F9000A632C /* LKLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010DA19E5B1F500ABA5B3 /* LKLinearLayout.m */; };
 		28CA472819E5B8F9000A632C /* LKLinearLayoutItem.h in Sources */ = {isa = PBXBuildFile; fileRef = 289010DB19E5B1F500ABA5B3 /* LKLinearLayoutItem.h */; };
 		28CA472919E5B8F9000A632C /* LKLinearLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010DC19E5B1F500ABA5B3 /* LKLinearLayoutItem.m */; };
-		28CA472A19E5B8F9000A632C /* LKLinearLayoutSeparatorDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 289010DD19E5B1F500ABA5B3 /* LKLinearLayoutSeparatorDelegate.h */; };
 		28CA472B19E5B8F9000A632C /* LKStackLayout.h in Sources */ = {isa = PBXBuildFile; fileRef = 289010DE19E5B1F500ABA5B3 /* LKStackLayout.h */; };
 		28CA472C19E5B8F9000A632C /* LKStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010DF19E5B1F500ABA5B3 /* LKStackLayout.m */; };
 		28CA472D19E5B8F9000A632C /* LKStackLayoutItem.h in Sources */ = {isa = PBXBuildFile; fileRef = 289010E019E5B1F500ABA5B3 /* LKStackLayoutItem.h */; };
@@ -111,14 +108,12 @@
 		289010D119E5B1F500ABA5B3 /* LKLayoutOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutOrientation.h; sourceTree = "<group>"; };
 		289010D219E5B1F500ABA5B3 /* LKLayoutParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutParser.h; sourceTree = "<group>"; };
 		289010D319E5B1F500ABA5B3 /* LKLayoutParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutParser.m; sourceTree = "<group>"; };
-		289010D619E5B1F500ABA5B3 /* LKLayoutSeparatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutSeparatorDelegate.h; sourceTree = "<group>"; };
 		289010D719E5B1F500ABA5B3 /* LKLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutView.h; sourceTree = "<group>"; };
 		289010D819E5B1F500ABA5B3 /* LKLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutView.m; sourceTree = "<group>"; };
 		289010D919E5B1F500ABA5B3 /* LKLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLinearLayout.h; sourceTree = "<group>"; };
 		289010DA19E5B1F500ABA5B3 /* LKLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLinearLayout.m; sourceTree = "<group>"; };
 		289010DB19E5B1F500ABA5B3 /* LKLinearLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLinearLayoutItem.h; sourceTree = "<group>"; };
 		289010DC19E5B1F500ABA5B3 /* LKLinearLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLinearLayoutItem.m; sourceTree = "<group>"; };
-		289010DD19E5B1F500ABA5B3 /* LKLinearLayoutSeparatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLinearLayoutSeparatorDelegate.h; sourceTree = "<group>"; };
 		289010DE19E5B1F500ABA5B3 /* LKStackLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKStackLayout.h; sourceTree = "<group>"; };
 		289010DF19E5B1F500ABA5B3 /* LKStackLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKStackLayout.m; sourceTree = "<group>"; };
 		289010E019E5B1F500ABA5B3 /* LKStackLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKStackLayoutItem.h; sourceTree = "<group>"; };
@@ -138,8 +133,6 @@
 		289010FE19E5B37000ABA5B3 /* LKStackLayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKStackLayoutTests.m; sourceTree = "<group>"; };
 		2890110019E5B37000ABA5B3 /* LKLayoutDelegateImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutDelegateImpl.h; sourceTree = "<group>"; };
 		2890110119E5B37000ABA5B3 /* LKLayoutDelegateImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutDelegateImpl.m; sourceTree = "<group>"; };
-		2890110219E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLinearLayoutSeparatorImpl.h; sourceTree = "<group>"; };
-		2890110319E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLinearLayoutSeparatorImpl.m; sourceTree = "<group>"; };
 		28CA46EA19E5B747000A632C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28CA473319E5BB8C000A632C /* LKLayoutLibrary.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = LKLayoutLibrary.podspec.json; path = ../LKLayoutLibrary.podspec.json; sourceTree = "<group>"; };
 		8A572D31A18DB80572480AB3 /* Pods-LKLayoutLibraryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKLayoutLibraryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,7 +208,6 @@
 				289010C219E5B1F500ABA5B3 /* LKCGRectAdditions.h */,
 				289010CC19E5B1F500ABA5B3 /* LKLayoutDelegate.h */,
 				289010D119E5B1F500ABA5B3 /* LKLayoutOrientation.h */,
-				289010D619E5B1F500ABA5B3 /* LKLayoutSeparatorDelegate.h */,
 				289010D719E5B1F500ABA5B3 /* LKLayoutView.h */,
 				289010D819E5B1F500ABA5B3 /* LKLayoutView.m */,
 				28CA473119E5BA47000A632C /* Utils */,
@@ -277,8 +269,6 @@
 			children = (
 				2890110019E5B37000ABA5B3 /* LKLayoutDelegateImpl.h */,
 				2890110119E5B37000ABA5B3 /* LKLayoutDelegateImpl.m */,
-				2890110219E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.h */,
-				2890110319E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m */,
 			);
 			path = MockObjects;
 			sourceTree = "<group>";
@@ -286,7 +276,6 @@
 		28CA472F19E5B9D3000A632C /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
-				289010DD19E5B1F500ABA5B3 /* LKLinearLayoutSeparatorDelegate.h */,
 				289010D919E5B1F500ABA5B3 /* LKLinearLayout.h */,
 				289010DA19E5B1F500ABA5B3 /* LKLinearLayout.m */,
 				289010C319E5B1F500ABA5B3 /* LKFlowLayout.h */,
@@ -394,8 +383,6 @@
 			mainGroup = 286BB19019E5B1700042CD74;
 			productRefGroup = 286BB19A19E5B1700042CD74 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				286BB19819E5B1700042CD74 /* LKLayoutLibrary */,
@@ -488,14 +475,12 @@
 				28CA471E19E5B8F9000A632C /* LKLayoutOrientation.h in Sources */,
 				28CA471F19E5B8F9000A632C /* LKLayoutParser.h in Sources */,
 				28CA472019E5B8F9000A632C /* LKLayoutParser.m in Sources */,
-				28CA472319E5B8F9000A632C /* LKLayoutSeparatorDelegate.h in Sources */,
 				28CA472419E5B8F9000A632C /* LKLayoutView.h in Sources */,
 				28CA472519E5B8F9000A632C /* LKLayoutView.m in Sources */,
 				28CA472619E5B8F9000A632C /* LKLinearLayout.h in Sources */,
 				28CA472719E5B8F9000A632C /* LKLinearLayout.m in Sources */,
 				28CA472819E5B8F9000A632C /* LKLinearLayoutItem.h in Sources */,
 				28CA472919E5B8F9000A632C /* LKLinearLayoutItem.m in Sources */,
-				28CA472A19E5B8F9000A632C /* LKLinearLayoutSeparatorDelegate.h in Sources */,
 				28CA472B19E5B8F9000A632C /* LKStackLayout.h in Sources */,
 				28CA472C19E5B8F9000A632C /* LKStackLayout.m in Sources */,
 				28CA472D19E5B8F9000A632C /* LKStackLayoutItem.h in Sources */,
@@ -511,7 +496,6 @@
 				2890110919E5B37000ABA5B3 /* LKLayoutLibraryTests.m in Sources */,
 				2890110519E5B37000ABA5B3 /* LKGravityTests.m in Sources */,
 				2890110E19E5B37000ABA5B3 /* LKLayoutDelegateImpl.m in Sources */,
-				2890110F19E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
