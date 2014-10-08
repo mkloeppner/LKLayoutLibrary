@@ -78,9 +78,9 @@ FOUNDATION_EXPORT const CGFloat kLKLayoutItemSizeValueMatchParent;
 /**
  * Gravity aligns the layout items view to the following options:
  *
- * gravity = MKLayoutGravityTop | MKLayoutGravityLeft = The view is on the upper left corner
- * gravity = MKLayoutGravityBottom | MKLayoutGravityCenterHorizontal = The view is on the horizontal center of the bottom view
- * gravity = MKLayoutGravityCenterVertical | MKLayoutGravityCenterHorizontal = The view is on the center of the cell
+ * gravity = LKLayoutGravityTop | LKLayoutGravityLeft = The view is on the upper left corner
+ * gravity = LKLayoutGravityBottom | LKLayoutGravityCenterHorizontal = The view is on the horizontal center of the bottom view
+ * gravity = LKLayoutGravityCenterVertical | LKLayoutGravityCenterHorizontal = The view is on the center of the cell
  *
  * @see LKLayoutGravity
  */

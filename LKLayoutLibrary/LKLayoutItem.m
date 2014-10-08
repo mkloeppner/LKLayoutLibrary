@@ -35,7 +35,7 @@ const CGFloat kLKLayoutItemSizeValueMatchParent = -1.0f;
     self = [super init];
     if (self) {
         self.layout = layout;
-        _gravity = MKLayoutGravityNone;
+        _gravity = LKLayoutGravityNone;
         _size = CGSizeMake(kLKLayoutItemSizeValueMatchParent, kLKLayoutItemSizeValueMatchParent);
         _padding = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f);
         _offset = UIOffsetMake(0.0f, 0.0f);

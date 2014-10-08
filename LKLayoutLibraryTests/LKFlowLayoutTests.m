@@ -272,7 +272,7 @@ describe(@"LKFlowLayoutTests", ^{
         
         LKFlowLayoutItem *item = [layout addSubview:view1];
         item.size = CGSizeMake(30.0f, 30.0f);
-        item.gravity = MKLayoutGravityBottom;
+        item.gravity = LKLayoutGravityBottom;
         
         LKFlowLayoutItem *item2 = [layout addSubview:view2];
         item2.size = CGSizeMake(20.0f, 50.0f);
@@ -295,7 +295,7 @@ describe(@"LKFlowLayoutTests", ^{
         
         LKFlowLayoutItem *item = [layout addSubview:view1];
         item.size = CGSizeMake(30.0f, 30.0f);
-        item.gravity = MKLayoutGravityBottom;
+        item.gravity = LKLayoutGravityBottom;
         item.padding = UIEdgeInsetsMake(1.0f, 2.0f, 3.0f, 4.0f);
         
         LKFlowLayoutItem *item2 = [layout addSubview:view2];
@@ -322,7 +322,7 @@ describe(@"LKFlowLayoutTests", ^{
         
         LKFlowLayoutItem *item = [layout addSubview:view1];
         item.size = CGSizeMake(30.0f, 100.0f);
-        item.gravity = MKLayoutGravityRight;
+        item.gravity = LKLayoutGravityRight;
         
         LKFlowLayoutItem *item2 = [layout addSubview:view2];
         item2.size = CGSizeMake(50.0f, 50.0f);
@@ -347,7 +347,7 @@ describe(@"LKFlowLayoutTests", ^{
         
         LKFlowLayoutItem *item = [layout addSubview:view1];
         item.size = CGSizeMake(30.0f, 100.0f);
-        item.gravity = MKLayoutGravityRight;
+        item.gravity = LKLayoutGravityRight;
         item.padding = UIEdgeInsetsMake(1.0f, 2.0f, 3.0f, 4.0f);
         
         LKFlowLayoutItem *item2 = [layout addSubview:view2];

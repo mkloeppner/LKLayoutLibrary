@@ -362,10 +362,10 @@ describe(@"LKStackLayout", ^{
         
         layoutItem1.size = CGSizeMake(57.0f, 57.0f);
         layoutItem1.padding = UIEdgeInsetsMake(7.0f, 5.0f, 5.0f, 5.0f);
-        layoutItem1.gravity = MKLayoutGravityTop | MKLayoutGravityLeft;
+        layoutItem1.gravity = LKLayoutGravityTop | LKLayoutGravityLeft;
         layoutItem2.size = CGSizeMake(31.0f, 25.0f);
         layoutItem2.padding = UIEdgeInsetsMake(6.0f, 4.0f, 3.0f, 3.0f);
-        layoutItem2.gravity = MKLayoutGravityBottom | MKLayoutGravityRight;
+        layoutItem2.gravity = LKLayoutGravityBottom | LKLayoutGravityRight;
         
         [layout layout];
         

@@ -106,11 +106,11 @@ describe(@"LKLinearLayout", ^{
         
         LKLinearLayoutItem *layoutItem = [layout addSubview:subview1];
         layoutItem.size = CGSizeMake(30.0f, 10.0f);
-        layoutItem.gravity = MKLayoutGravityCenterVertical;
+        layoutItem.gravity = LKLayoutGravityCenterVertical;
         
         LKLinearLayoutItem *layoutItem2 = [layout addSubview:subview2];
         layoutItem2.size = CGSizeMake(70.0f, 20.0f);
-        layoutItem2.gravity = MKLayoutGravityCenterVertical;
+        layoutItem2.gravity = LKLayoutGravityCenterVertical;
         
         layout.orientation = LKLayoutOrientationHorizontal;
         [layout layout];

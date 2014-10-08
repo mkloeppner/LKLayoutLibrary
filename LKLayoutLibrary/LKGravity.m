@@ -32,7 +32,7 @@
 
 - (void)moveByGravity:(LKLayoutGravity)gravity {
     
-    if (MKLayoutGravityNone == gravity) {
+    if (LKLayoutGravityNone == gravity) {
         return;
     }
     self.gravity = gravity;
@@ -74,7 +74,7 @@
 }
 
 - (BOOL)shouldBeCenteredHorizontally {
-    return (self.gravity & MKLayoutGravityCenterHorizontal) == MKLayoutGravityCenterHorizontal;
+    return (self.gravity & LKLayoutGravityCenterHorizontal) == LKLayoutGravityCenterHorizontal;
 }
 
 - (void)moveRectToHorizontalCenter {
@@ -82,7 +82,7 @@
 }
 
 - (BOOL)shouldBeCenteredVertically {
-    return (self.gravity & MKLayoutGravityCenterVertical) == MKLayoutGravityCenterVertical;
+    return (self.gravity & LKLayoutGravityCenterVertical) == LKLayoutGravityCenterVertical;
 }
 
 - (void)moveRectToVerticalCenter{
@@ -90,7 +90,7 @@
 }
 
 - (BOOL)shouldBeMovedToTheLeft {
-    return (self.gravity & MKLayoutGravityLeft) == MKLayoutGravityLeft;
+    return (self.gravity & LKLayoutGravityLeft) == LKLayoutGravityLeft;
 }
 
 - (void)moveRectToLeftOfParent{
@@ -98,7 +98,7 @@
 }
 
 - (BOOL)shouldBeMovedToTheRight {
-    return (self.gravity & MKLayoutGravityRight) == MKLayoutGravityRight;
+    return (self.gravity & LKLayoutGravityRight) == LKLayoutGravityRight;
 }
 
 - (void)moveRectToRightOfParent{
@@ -106,7 +106,7 @@
 }
 
 - (BOOL)shouldBeMovedToTheTop {
-    return (self.gravity & MKLayoutGravityTop) == MKLayoutGravityTop;
+    return (self.gravity & LKLayoutGravityTop) == LKLayoutGravityTop;
 }
 
 - (void)moveRectToTopOfParent{
@@ -114,7 +114,7 @@
 }
 
 - (BOOL)shouldBeMovedToTheBottom {
-    return (self.gravity & MKLayoutGravityBottom) == MKLayoutGravityBottom;
+    return (self.gravity & LKLayoutGravityBottom) == LKLayoutGravityBottom;
 }
 
 - (void)moveRectToBottomOfParent{

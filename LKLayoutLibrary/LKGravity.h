@@ -14,13 +14,13 @@
  * For example a view with a size of 100x100 aligned in a view with 1000x1000 positioned with gravity top and gravity right will be positionated at position 900(1000-100)x100.
  */
 typedef NS_OPTIONS(NSInteger, LKLayoutGravity) {
-    MKLayoutGravityNone = 1 << 0, // Specifies, that the view doesn't stick to any edge
-    MKLayoutGravityTop = 1 << 1, // Specifies that a view is aligned on top
-    MKLayoutGravityBottom = 1 << 2, // Specifies that a view is aligned on bottom
-    MKLayoutGravityLeft = 1 << 3, // Specifies that a view is aligned to the left
-    MKLayoutGravityRight = 1 << 4, // Specifies that a view is aligned to the right
-    MKLayoutGravityCenterVertical = 1 << 5, // Specifies that a views center is aligned to its superview center on the vertical axis
-    MKLayoutGravityCenterHorizontal = 1 << 6 // Specifies that a views center is aligned to its superview center on the horizontal axis
+    LKLayoutGravityNone = 1 << 0, // Specifies, that the view doesn't stick to any edge
+    LKLayoutGravityTop = 1 << 1, // Specifies that a view is aligned on top
+    LKLayoutGravityBottom = 1 << 2, // Specifies that a view is aligned on bottom
+    LKLayoutGravityLeft = 1 << 3, // Specifies that a view is aligned to the left
+    LKLayoutGravityRight = 1 << 4, // Specifies that a view is aligned to the right
+    LKLayoutGravityCenterVertical = 1 << 5, // Specifies that a views center is aligned to its superview center on the vertical axis
+    LKLayoutGravityCenterHorizontal = 1 << 6 // Specifies that a views center is aligned to its superview center on the horizontal axis
 };
 
 /**
@@ -38,7 +38,7 @@ typedef NS_OPTIONS(NSInteger, LKLayoutGravity) {
 /**
  * Moves an rect within an other rect and uses the gravity to align it within.
  *
- *      Note: If gravity is MKLayoutGravityNone the method exits immediately with return the rect param.
+ *      Note: If gravity is LKLayoutGravityNone the method exits immediately with return the rect param.
  */
 - (void)moveByGravity:(LKLayoutGravity)gravity;
 
