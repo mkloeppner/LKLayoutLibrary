@@ -138,10 +138,6 @@
     
     [self layoutBounds:bounds];
     
-    if (!self.item.layout) {
-        [self callSeparatorDelegate];
-    }
-    
     self.bounds = CGRectMake(0.0f, 0.0f, 0.0f, 0.0f);
 }
 
@@ -207,31 +203,6 @@
 {
     NSInteger itemIndex = [self.mutableItems indexOfObject:layoutItem];
     [self removeLayoutItemAtIndex:itemIndex];
-}
-
-#pragma mark - Separator management
-- (NSInteger)numberOfBordersForOrientation:(LKLayoutOrientation)orientation
-{
-    NSInteger numberOfSeparators = 0;
-    
-    for (LKLayoutItem *item in self.items) {
-        if (item.sublayout) {
-            LKLayout *layout = (LKLayout *)item.sublayout;
-            numberOfSeparators += [layout numberOfBordersForOrientation:orientation];
-        }
-    }
-    
-    return numberOfSeparators;
-}
-
-- (void)callSeparatorDelegate
-{
-    for (LKLayoutItem *item in self.items) {
-        if (item.sublayout && [item.sublayout respondsToSelector:@selector(callSeparatorDelegate)]) {
-            id sublayout = item.sublayout;
-            [sublayout callSeparatorDelegate];
-        }
-    }
 }
 
 @end
