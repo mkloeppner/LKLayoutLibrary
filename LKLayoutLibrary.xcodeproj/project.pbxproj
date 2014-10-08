@@ -21,7 +21,30 @@
 		289010ED19E5B1F500ABA5B3 /* LKStackLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010E119E5B1F500ABA5B3 /* LKStackLayoutItem.m */; };
 		289010EF19E5B21700ABA5B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289010EE19E5B21700ABA5B3 /* UIKit.framework */; };
 		289010F219E5B23D00ABA5B3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289010F119E5B23D00ABA5B3 /* QuartzCore.framework */; };
+		2890110419E5B37000ABA5B3 /* LKFlowLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010F519E5B37000ABA5B3 /* LKFlowLayoutTests.m */; };
+		2890110519E5B37000ABA5B3 /* LKGravityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010F619E5B37000ABA5B3 /* LKGravityTests.m */; };
+		2890110619E5B37000ABA5B3 /* LKLayoutItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010F719E5B37000ABA5B3 /* LKLayoutItemTests.m */; };
+		2890110719E5B37000ABA5B3 /* LKLayoutItemTestsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010F819E5B37000ABA5B3 /* LKLayoutItemTestsSpec.m */; };
+		2890110819E5B37000ABA5B3 /* LKLayoutLibraryLayoutIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010F919E5B37000ABA5B3 /* LKLayoutLibraryLayoutIntegrationTests.m */; };
+		2890110919E5B37000ABA5B3 /* LKLayoutLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010FA19E5B37000ABA5B3 /* LKLayoutLibraryTests.m */; };
+		2890110A19E5B37000ABA5B3 /* LKLayoutParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010FB19E5B37000ABA5B3 /* LKLayoutParserTests.m */; };
+		2890110B19E5B37000ABA5B3 /* LKLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010FC19E5B37000ABA5B3 /* LKLayoutTests.m */; };
+		2890110C19E5B37000ABA5B3 /* LKLinearLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010FD19E5B37000ABA5B3 /* LKLinearLayoutTests.m */; };
+		2890110D19E5B37000ABA5B3 /* LKStackLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010FE19E5B37000ABA5B3 /* LKStackLayoutTests.m */; };
+		2890110E19E5B37000ABA5B3 /* LKLayoutDelegateImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2890110119E5B37000ABA5B3 /* LKLayoutDelegateImpl.m */; };
+		2890110F19E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2890110319E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m */; };
+		F59ED3192D37CA6FEFF3E1E3 /* libPods-LKLayoutLibraryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C02B4E20370A4D4493279D1A /* libPods-LKLayoutLibraryTests.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28E2FCEF19E5B46600750033 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 286BB19119E5B1700042CD74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 286BB19819E5B1700042CD74;
+			remoteInfo = LKLayoutLibrary;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		286BB19719E5B1700042CD74 /* CopyFiles */ = {
@@ -74,6 +97,23 @@
 		289010EE19E5B21700ABA5B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		289010F119E5B23D00ABA5B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		289010F319E5B26400ABA5B3 /* LKLayoutLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LKLayoutLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		289010F519E5B37000ABA5B3 /* LKFlowLayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKFlowLayoutTests.m; sourceTree = "<group>"; };
+		289010F619E5B37000ABA5B3 /* LKGravityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKGravityTests.m; sourceTree = "<group>"; };
+		289010F719E5B37000ABA5B3 /* LKLayoutItemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutItemTests.m; sourceTree = "<group>"; };
+		289010F819E5B37000ABA5B3 /* LKLayoutItemTestsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutItemTestsSpec.m; sourceTree = "<group>"; };
+		289010F919E5B37000ABA5B3 /* LKLayoutLibraryLayoutIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutLibraryLayoutIntegrationTests.m; sourceTree = "<group>"; };
+		289010FA19E5B37000ABA5B3 /* LKLayoutLibraryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutLibraryTests.m; sourceTree = "<group>"; };
+		289010FB19E5B37000ABA5B3 /* LKLayoutParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutParserTests.m; sourceTree = "<group>"; };
+		289010FC19E5B37000ABA5B3 /* LKLayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutTests.m; sourceTree = "<group>"; };
+		289010FD19E5B37000ABA5B3 /* LKLinearLayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLinearLayoutTests.m; sourceTree = "<group>"; };
+		289010FE19E5B37000ABA5B3 /* LKStackLayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKStackLayoutTests.m; sourceTree = "<group>"; };
+		2890110019E5B37000ABA5B3 /* LKLayoutDelegateImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLayoutDelegateImpl.h; sourceTree = "<group>"; };
+		2890110119E5B37000ABA5B3 /* LKLayoutDelegateImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutDelegateImpl.m; sourceTree = "<group>"; };
+		2890110219E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLinearLayoutSeparatorImpl.h; sourceTree = "<group>"; };
+		2890110319E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLinearLayoutSeparatorImpl.m; sourceTree = "<group>"; };
+		8A572D31A18DB80572480AB3 /* Pods-LKLayoutLibraryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKLayoutLibraryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C02B4E20370A4D4493279D1A /* libPods-LKLayoutLibraryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LKLayoutLibraryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F805C64C1CDF4D4AADD74EE9 /* Pods-LKLayoutLibraryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKLayoutLibraryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +130,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F59ED3192D37CA6FEFF3E1E3 /* libPods-LKLayoutLibraryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		254D707050663FEB925DA3F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A572D31A18DB80572480AB3 /* Pods-LKLayoutLibraryTests.debug.xcconfig */,
+				F805C64C1CDF4D4AADD74EE9 /* Pods-LKLayoutLibraryTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		286BB19019E5B1700042CD74 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +153,7 @@
 				286BB1A519E5B1700042CD74 /* LKLayoutLibraryTests */,
 				289010F019E5B22600ABA5B3 /* Frameworks */,
 				286BB19A19E5B1700042CD74 /* Products */,
+				254D707050663FEB925DA3F4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,7 +201,7 @@
 				289010DF19E5B1F500ABA5B3 /* LKStackLayout.m */,
 				289010E019E5B1F500ABA5B3 /* LKStackLayoutItem.h */,
 				289010E119E5B1F500ABA5B3 /* LKStackLayoutItem.m */,
-				289010F319E5B26400ABA5B3 /* LKLayoutLibrary-Prefix.pch */,
+				289010F419E5B32B00ABA5B3 /* Supporting Files */,
 			);
 			path = LKLayoutLibrary;
 			sourceTree = "<group>";
@@ -158,6 +209,17 @@
 		286BB1A519E5B1700042CD74 /* LKLayoutLibraryTests */ = {
 			isa = PBXGroup;
 			children = (
+				289010F519E5B37000ABA5B3 /* LKFlowLayoutTests.m */,
+				289010F619E5B37000ABA5B3 /* LKGravityTests.m */,
+				289010F719E5B37000ABA5B3 /* LKLayoutItemTests.m */,
+				289010F819E5B37000ABA5B3 /* LKLayoutItemTestsSpec.m */,
+				289010F919E5B37000ABA5B3 /* LKLayoutLibraryLayoutIntegrationTests.m */,
+				289010FA19E5B37000ABA5B3 /* LKLayoutLibraryTests.m */,
+				289010FB19E5B37000ABA5B3 /* LKLayoutParserTests.m */,
+				289010FC19E5B37000ABA5B3 /* LKLayoutTests.m */,
+				289010FD19E5B37000ABA5B3 /* LKLinearLayoutTests.m */,
+				289010FE19E5B37000ABA5B3 /* LKStackLayoutTests.m */,
+				289010FF19E5B37000ABA5B3 /* MockObjects */,
 				286BB1A619E5B1700042CD74 /* Supporting Files */,
 			);
 			path = LKLayoutLibraryTests;
@@ -176,8 +238,28 @@
 			children = (
 				289010F119E5B23D00ABA5B3 /* QuartzCore.framework */,
 				289010EE19E5B21700ABA5B3 /* UIKit.framework */,
+				C02B4E20370A4D4493279D1A /* libPods-LKLayoutLibraryTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		289010F419E5B32B00ABA5B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				289010F319E5B26400ABA5B3 /* LKLayoutLibrary-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		289010FF19E5B37000ABA5B3 /* MockObjects */ = {
+			isa = PBXGroup;
+			children = (
+				2890110019E5B37000ABA5B3 /* LKLayoutDelegateImpl.h */,
+				2890110119E5B37000ABA5B3 /* LKLayoutDelegateImpl.m */,
+				2890110219E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.h */,
+				2890110319E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m */,
+			);
+			path = MockObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,13 +286,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 286BB1AD19E5B1700042CD74 /* Build configuration list for PBXNativeTarget "LKLayoutLibraryTests" */;
 			buildPhases = (
+				CAFF6A7E14276151F8275BC3 /* Check Pods Manifest.lock */,
 				286BB1A019E5B1700042CD74 /* Sources */,
 				286BB1A119E5B1700042CD74 /* Frameworks */,
 				286BB1A219E5B1700042CD74 /* Resources */,
+				A7B6F2DA6D32E8A2D4D201B4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				28E2FCF019E5B46600750033 /* PBXTargetDependency */,
 			);
 			name = LKLayoutLibraryTests;
 			productName = LKLayoutLibraryTests;
@@ -262,6 +347,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A7B6F2DA6D32E8A2D4D201B4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAFF6A7E14276151F8275BC3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		286BB19519E5B1700042CD74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -286,10 +404,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2890110A19E5B37000ABA5B3 /* LKLayoutParserTests.m in Sources */,
+				2890110D19E5B37000ABA5B3 /* LKStackLayoutTests.m in Sources */,
+				2890110819E5B37000ABA5B3 /* LKLayoutLibraryLayoutIntegrationTests.m in Sources */,
+				2890110C19E5B37000ABA5B3 /* LKLinearLayoutTests.m in Sources */,
+				2890110B19E5B37000ABA5B3 /* LKLayoutTests.m in Sources */,
+				2890110719E5B37000ABA5B3 /* LKLayoutItemTestsSpec.m in Sources */,
+				2890110419E5B37000ABA5B3 /* LKFlowLayoutTests.m in Sources */,
+				2890110619E5B37000ABA5B3 /* LKLayoutItemTests.m in Sources */,
+				2890110919E5B37000ABA5B3 /* LKLayoutLibraryTests.m in Sources */,
+				2890110519E5B37000ABA5B3 /* LKGravityTests.m in Sources */,
+				2890110E19E5B37000ABA5B3 /* LKLayoutDelegateImpl.m in Sources */,
+				2890110F19E5B37000ABA5B3 /* LKLinearLayoutSeparatorImpl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28E2FCF019E5B46600750033 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 286BB19819E5B1700042CD74 /* LKLayoutLibrary */;
+			targetProxy = 28E2FCEF19E5B46600750033 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		286BB1A819E5B1700042CD74 /* Debug */ = {
@@ -388,6 +526,7 @@
 		};
 		286BB1AE19E5B1700042CD74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A572D31A18DB80572480AB3 /* Pods-LKLayoutLibraryTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -405,6 +544,7 @@
 		};
 		286BB1AF19E5B1700042CD74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F805C64C1CDF4D4AADD74EE9 /* Pods-LKLayoutLibraryTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
