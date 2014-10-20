@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LKLayoutLibrary.h"
+#import "LKLayout.h"
 
 extern NSString *const kLKLayoutParserErrorDomain;
 

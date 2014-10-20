@@ -7,6 +7,10 @@
 //
 
 #import "LKLayoutParser.h"
+#import "LKLayout.h"
+#import "LKStackLayout.h"
+#import "LKLinearLayout.h"
+#import "LKFlowLayout.h"
 
 NSString *const kLKLayoutParserErrorDomain = @"MKLayoutParserErrorDomain";
 
