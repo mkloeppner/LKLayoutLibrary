@@ -30,4 +30,7 @@ DECLARE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKFlowLayoutItem);
  */
 @property (assign, nonatomic) LKLayoutOrientation orientation;
 
+@property (assign, nonatomic) CGFloat horizontalSpacing;
+@property (assign, nonatomic) CGFloat verticalSpacing;
+
 @end
