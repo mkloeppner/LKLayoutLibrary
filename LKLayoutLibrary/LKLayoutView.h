@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "LKLayout.h"
 
-@interface LKLayoutView : UIView
+@interface LKLayoutView<__covariant ObjectType> : UIView
 
-@property (strong, nonatomic) LKLayout *rootLayout;
+@property (strong, nonatomic) ObjectType _Nullable rootLayout;
 
 - (instancetype _Nonnull)initWithLayoutNamed:(NSString * _Nonnull)layoutName;
-- (instancetype _Nonnull)initWithFrame:(CGRect)frame layout:(LKLayout * _Nonnull)layout;
+- (instancetype _Nonnull)initWithFrame:(CGRect)frame layout:(ObjectType _Nonnull)layout;
 
 @end

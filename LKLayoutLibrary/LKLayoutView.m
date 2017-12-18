@@ -16,12 +16,12 @@
     return nil;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame layout:(LKLayout *)layout
+- (instancetype)initWithFrame:(CGRect)frame layout:(id _Nonnull)layout
 {
     self = [super initWithFrame:frame];
     if (self) {
         self.rootLayout = layout;
-        self.rootLayout.view = self;
+        [self.rootLayout setView:self];
     }
     return self;
 }
@@ -36,7 +36,7 @@
 {
     [super layoutSubviews];
     
-    [self.rootLayout layout];
+    [((LKLayout *)self.rootLayout) layout];
 }
 
 @end
