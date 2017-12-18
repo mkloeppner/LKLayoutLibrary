@@ -19,6 +19,6 @@
  * layout behaviour for that view.
  *
  */
-@property (weak, nonatomic, readonly) LKLayoutItem *item;
+@property (weak, nonatomic, readonly) LKLayoutItem * _Nullable item;
 
 @end

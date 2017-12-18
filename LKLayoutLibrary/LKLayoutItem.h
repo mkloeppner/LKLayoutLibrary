@@ -29,13 +29,13 @@ FOUNDATION_EXPORT const CGFloat kLKLayoutItemSizeValueMatchParent;
  */
 @interface LKLayoutItem : NSObject
 
-- (instancetype)initWithLayout:(LKLayout *)layout subview:(UIView *)view;
-- (instancetype)initWithLayout:(LKLayout *)layout sublayout:(LKLayout *)sublayout;
+- (instancetype _Nonnull)initWithLayout:(LKLayout * _Nonnull)layout subview:(UIView * _Nonnull)view;
+- (instancetype _Nonnull)initWithLayout:(LKLayout * _Nonnull)layout sublayout:(LKLayout * _Nonnull)sublayout;
 
 /**
  * The parent layout of the current layout item
  */
-@property (weak, nonatomic, readonly) LKLayout *layout;
+@property (weak, nonatomic, readonly) LKLayout * __nullable layout;
 
 /**
  * An absolute size within a layout
@@ -65,8 +65,8 @@ FOUNDATION_EXPORT const CGFloat kLKLayoutItemSizeValueMatchParent;
  *
  * Use the property which instance is not nil
  */
-@property (strong, nonatomic, readonly) UIView *subview;
-@property (strong, nonatomic, readonly) LKLayout *sublayout;
+@property (strong, nonatomic, readonly) UIView * __nullable subview;
+@property (strong, nonatomic, readonly) LKLayout * __nullable sublayout;
 
 /**
  * Gravity aligns the layout items view to the following options:
@@ -82,7 +82,7 @@ FOUNDATION_EXPORT const CGFloat kLKLayoutItemSizeValueMatchParent;
 /**
  * Allows to store meta data for debugging, layout introspection ...
  */
-@property (strong, nonatomic) NSDictionary *userInfo;
+@property (strong, nonatomic) NSDictionary * __nullable userInfo;
 
 /**
  * Removes the whole layout contents and cleans them up

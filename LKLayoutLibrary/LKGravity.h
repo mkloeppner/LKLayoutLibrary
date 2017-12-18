@@ -33,7 +33,7 @@ typedef NS_OPTIONS(NSInteger, LKLayoutGravity) {
 @property (assign, nonatomic, readonly) CGRect CGRect;
 @property (assign, nonatomic, readonly) CGRect parentRect;
 
-- (instancetype)initWithCGRect:(CGRect)rect parent:(CGRect)parentRect;
+- (instancetype _Nonnull)initWithCGRect:(CGRect)rect parent:(CGRect)parentRect;
 
 /**
  * Moves an rect within an other rect and uses the gravity to align it within.

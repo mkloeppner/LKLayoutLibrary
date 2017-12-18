@@ -11,6 +11,6 @@
 
 @interface UIView (LKLayoutItemInternalAPI)
 
-@property (weak, nonatomic, readwrite) LKLayoutItem *item;
+@property (weak, nonatomic, readwrite) LKLayoutItem * _Nullable item;
 
 @end

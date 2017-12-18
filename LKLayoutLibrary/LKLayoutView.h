@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) LKLayout *rootLayout;
 
-- (instancetype)initWithLayoutNamed:(NSString *)layoutName;
-- (instancetype)initWithFrame:(CGRect)frame layout:(LKLayout *)layout;
+- (instancetype _Nonnull)initWithLayoutNamed:(NSString * _Nonnull)layoutName;
+- (instancetype _Nonnull)initWithFrame:(CGRect)frame layout:(LKLayout * _Nonnull)layout;
 
 @end

@@ -11,9 +11,9 @@
 		1CEBAF448F3E880370EF021F /* UIView+LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */; };
 		2661FD471FE7B4EF00D2F7D8 /* LKLayoutLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010D019E5B1F500ABA5B3 /* LKLayoutLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2661FD481FE7B4EF00D2F7D8 /* LKGravity.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010C719E5B1F500ABA5B3 /* LKGravity.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2661FD491FE7B4EF00D2F7D8 /* LKLayoutItem_SubclassAccessors.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010CD19E5B1F500ABA5B3 /* LKLayoutItem_SubclassAccessors.h */; };
+		2661FD491FE7B4EF00D2F7D8 /* LKLayoutItem_SubclassAccessors.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010CD19E5B1F500ABA5B3 /* LKLayoutItem_SubclassAccessors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2661FD4A1FE7B4EF00D2F7D8 /* LKLayoutItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010CE19E5B1F500ABA5B3 /* LKLayoutItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2661FD4B1FE7B4EF00D2F7D8 /* LKLayout_SubclassAccessors.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010C919E5B1F500ABA5B3 /* LKLayout_SubclassAccessors.h */; };
+		2661FD4B1FE7B4EF00D2F7D8 /* LKLayout_SubclassAccessors.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010C919E5B1F500ABA5B3 /* LKLayout_SubclassAccessors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2661FD4C1FE7B4EF00D2F7D8 /* LKLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010CA19E5B1F500ABA5B3 /* LKLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2661FD4D1FE7B4EF00D2F7D8 /* LKCGRectAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010C219E5B1F500ABA5B3 /* LKCGRectAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2661FD4E1FE7B4EF00D2F7D8 /* LKLayoutDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010CC19E5B1F500ABA5B3 /* LKLayoutDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };

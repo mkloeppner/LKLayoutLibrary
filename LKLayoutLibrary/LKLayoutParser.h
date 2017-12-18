@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LKLayout.h"
 
-extern NSString *const kLKLayoutParserErrorDomain;
+extern NSString * _Nullable const kLKLayoutParserErrorDomain;
 
 typedef enum {
     LKLayoutParserUnsupportedAttributeError
@@ -17,8 +17,8 @@ typedef enum {
 
 @interface LKLayoutParser : NSObject
 
-+ (LKLayout *)parseXMLFromFileAtURL:(NSURL *)fileURL error:(NSError *__autoreleasing *)error;
-- (LKLayout *)parseXMLFromFileAtURL:(NSURL *)fileURL error:(NSError *__autoreleasing *)error;
-- (LKLayout *)parseLayoutFromString:(NSString *)xmlLayout error:(NSError *__autoreleasing *)error;
++ (LKLayout *_Nullable)parseXMLFromFileAtURL:(NSURL * _Nonnull)fileURL error:(NSError * _Nullable __autoreleasing *_Nullable)error;
+- (LKLayout *_Nullable)parseXMLFromFileAtURL:(NSURL * _Nonnull)fileURL error:(NSError * _Nullable __autoreleasing *_Nullable)error;
+- (LKLayout *_Nullable)parseLayoutFromString:(NSString * _Nonnull)xmlLayout error:(NSError * _Nullable __autoreleasing *_Nullable)error;
 
 @end

@@ -12,30 +12,30 @@
 #import "LKLayoutOrientation.h"
 
 #define DECLARE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(classname) \
-- (classname *)addSubview:(UIView *)subview; \
-- (classname *)addSublayout:(LKLayout *)sublayout; \
-- (classname *)insertSubview:(UIView *)subview atIndex:(NSInteger)index; \
-- (classname *)insertSublayout:(LKLayout *)sublayout atIndex:(NSInteger)index; \
+- (classname * _Nonnull)addSubview:(UIView * _Nonnull)subview; \
+- (classname * _Nonnull)addSublayout:(LKLayout * _Nonnull)sublayout; \
+- (classname * _Nonnull)insertSubview:(UIView * _Nonnull)subview atIndex:(NSInteger)index; \
+- (classname * _Nonnull)insertSublayout:(LKLayout * _Nonnull)sublayout atIndex:(NSInteger)index; \
 
 #define SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(classname) \
-- (classname *)addSubview:(UIView *)subview \
+- (classname * _Nonnull)addSubview:(UIView * _Nonnull)subview \
 { \
     return [self insertSubview:subview atIndex:self.items.count]; \
 } \
 \
-- (classname *)addSublayout:(LKLayout *)sublayout \
+- (classname * _Nonnull)addSublayout:(LKLayout * _Nonnull)sublayout \
 { \
     return [self insertSublayout:sublayout atIndex:self.items.count]; \
 } \
 \
-- (classname *)insertSubview:(UIView *)subview atIndex:(NSInteger)index \
+- (classname * _Nonnull)insertSubview:(UIView * _Nonnull)subview atIndex:(NSInteger)index \
 { \
     classname *layoutItem = [[classname alloc] initWithLayout:self subview:subview]; \
     [self insertLayoutItem:layoutItem atIndex:index]; \
     return layoutItem; \
 } \
 \
-- (classname *)insertSublayout:(LKLayout *)sublayout atIndex:(NSInteger)index \
+- (classname * _Nonnull)insertSublayout:(LKLayout * _Nonnull)sublayout atIndex:(NSInteger)index \
 { \
     classname *layoutItem = [[classname alloc] initWithLayout:self sublayout:sublayout]; \
     [self insertLayoutItem:layoutItem atIndex:index]; \
@@ -62,7 +62,7 @@
 /**
  * Allows to store meta data for debugging, layout introspection ...
  */
-@property (strong, nonatomic) NSDictionary *userInfo;
+@property (strong, nonatomic) NSDictionary * _Nullable userInfo;
 
 /**
  * The layouts content scale factor
@@ -76,12 +76,12 @@
 /**
  * The layout delegate notifies layout steps and delegate some layout calculations.
  */
-@property (weak, nonatomic) id<LKLayoutDelegate> delegate;
+@property (weak, nonatomic) __nullable id<LKLayoutDelegate> delegate;
 
 /**
  * The parent layout item if layout is a sublayout
  */
-@property (weak, nonatomic, readonly) LKLayoutItem *item;
+@property (weak, nonatomic, readonly) LKLayoutItem * _Nullable item;
 
 /**
  * Adds spacing all around the layout contents
@@ -95,19 +95,19 @@
  *
  * For sublayouts the view property will be set automatically to parent layouts view.
  */
-@property (weak, nonatomic) UIView *view;
+@property (weak, nonatomic) UIView * _Nullable view;
 
 /**
  * The layout items representing the layouts structure
  *
  * Contains instances of LKLayoutItem or its subclasses. LKLayout subclasses ensure typesafety by overwriting - (LKLayoutItem *)addView:(UIView *)view and - (LKLayoutItem *)addSublayout:(LKLayout *)sublayout
  */
-@property (strong, nonatomic, readonly) NSArray *items;
+@property (strong, nonatomic, readonly) NSArray<__kindof LKLayoutItem *> * __nonnull items;
 
 /**
  * @param view The root layouts view or the view that needs to be layouted
  */
-- (instancetype)initWithView:(UIView *)view;
+- (instancetype _Nonnull )initWithView:(UIView * _Nonnull )view;
 
 #pragma mark - UIView and Layout API
 /**
@@ -116,7 +116,7 @@
  * @param subview a view that will be position by the layout
  * @return the associated LKLayoutItem It allows layout behavior costumization with view layout properties
  */
-- (LKLayoutItem *)addSubview:(UIView *)subview;
+- (LKLayoutItem * _Nonnull )addSubview:(UIView * _Nonnull )subview;
 
 /**
  * Adds a sublayout to the layout.
@@ -124,7 +124,7 @@
  * @param sublayout a sublayout that will be position by the layout
  * @return the associated LKLayoutItem It allows layout behavior costumization with view layout properties
  */
-- (LKLayoutItem *)addSublayout:(LKLayout *)sublayout;
+- (LKLayoutItem * _Nonnull )addSublayout:(LKLayout * _Nonnull )sublayout;
 
 /**
  * Adds a subview to the layout with a specific index.
@@ -133,7 +133,7 @@
  * @param index the position in the layout at which the subview will be inserted
  * @return the associated LKLayoutItem It allows layout behavior costumization with view layout properties
  */
-- (LKLayoutItem *)insertSubview:(UIView *)subview atIndex:(NSInteger)index;
+- (LKLayoutItem * _Nonnull )insertSubview:(UIView * _Nonnull )subview atIndex:(NSInteger)index;
 
 /**
  * Adds a sublayout to the layout with a specific index.
@@ -142,7 +142,7 @@
  * @param index the position in the layout at which the sublayout will be inserted
  * @return the associated LKLayoutItem It allows layout behavior costumization with view layout properties
  */
-- (LKLayoutItem *)insertSublayout:(LKLayout *)sublayout atIndex:(NSInteger)index;
+- (LKLayoutItem * _Nonnull )insertSublayout:(LKLayout * _Nonnull )sublayout atIndex:(NSInteger)index;
 
 #pragma mark - LKLayoutItem API
 /**
@@ -155,7 +155,7 @@
 /**
  * Add a layout item to allow subclasses using their own item classes with custom properties
  */
-- (void)insertLayoutItem:(LKLayoutItem *)layoutItem atIndex:(NSInteger)index;
+- (void)insertLayoutItem:(LKLayoutItem * _Nonnull )layoutItem atIndex:(NSInteger)index;
 
 /**
  * Removes a layout item with a specified index
@@ -169,7 +169,7 @@
  *
  *  @param item the item, that will be added at the end of the layout
  */
-- (void)addLayoutItem:(LKLayoutItem *)layoutItem;
+- (void)addLayoutItem:(LKLayoutItem * _Nonnull )layoutItem;
 
 /**
  *  Removes a layout item from a layout.
@@ -178,7 +178,7 @@
  *
  *  @param item The layout item to be removed from the layout
  */
-- (void)removeLayoutItem:(LKLayoutItem *)layoutItem;
+- (void)removeLayoutItem:(LKLayoutItem * _Nonnull )layoutItem;
 
 #pragma mark - Layouting API
 /**

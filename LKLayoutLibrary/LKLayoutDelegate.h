@@ -13,10 +13,10 @@
 @protocol LKLayoutDelegate <NSObject>
 
 @optional
-- (void)layoutDidStartToLayout:(LKLayout *)layout;
-- (void)layout:(LKLayout *)layout didAddLayoutItem:(LKLayoutItem *)item;
-- (void)layout:(LKLayout *)layout didRemoveLayoutItem:(LKLayoutItem *)item;
-- (void)layoutDidFinishToLayout:(LKLayout *)layout;
+- (void)layoutDidStartToLayout:(LKLayout * _Nonnull)layout;
+- (void)layout:(LKLayout * _Nonnull)layout didAddLayoutItem:(LKLayoutItem * _Nonnull)item;
+- (void)layout:(LKLayout * _Nonnull)layout didRemoveLayoutItem:(LKLayoutItem * _Nonnull)item;
+- (void)layoutDidFinishToLayout:(LKLayout * _Nonnull)layout;
 
 @end
 
