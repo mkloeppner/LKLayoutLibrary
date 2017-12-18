@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LKLayout.h"
+#import "LKLayoutDelegate.h"
 #import "LKLayoutItem.h"
 #import "LKLinearLayout.h"
 #import "LKLinearLayoutItem.h"
@@ -15,11 +16,12 @@
 #import "LKStackLayoutItem.h"
 #import "LKFlowLayout.h"
 #import "LKFlowLayoutItem.h"
-#import "LKLayoutItem_SubclassAccessors.h"
+#import "UIView+LKLayoutItem.h"
 #import "LKLayoutView.h"
 #import "LKLayoutDelegate.h"
 #import "LKLayoutOrientation.h"
 #import "LKLayoutParser.h"
+#import "LKGravity.h"
 
 
 //! Project version number for LKLayoutLibrary.

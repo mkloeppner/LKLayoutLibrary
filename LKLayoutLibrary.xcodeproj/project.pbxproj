@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		1CEBA97871292E15812217A0 /* UIView+LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */; };
 		1CEBAF448F3E880370EF021F /* UIView+LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */; };
+		2661FD391FE7B3C700D2F7D8 /* LKGravity.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010C719E5B1F500ABA5B3 /* LKGravity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD3A1FE7B3C700D2F7D8 /* LKLayoutItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010CE19E5B1F500ABA5B3 /* LKLayoutItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD3B1FE7B3C700D2F7D8 /* LKLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010CA19E5B1F500ABA5B3 /* LKLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD3C1FE7B3C700D2F7D8 /* LKLayoutDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010CC19E5B1F500ABA5B3 /* LKLayoutDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD3D1FE7B3C700D2F7D8 /* LKLayoutOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010D119E5B1F500ABA5B3 /* LKLayoutOrientation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD3E1FE7B3C700D2F7D8 /* LKLayoutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010D719E5B1F500ABA5B3 /* LKLayoutView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD3F1FE7B3C700D2F7D8 /* LKLayoutParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010D219E5B1F500ABA5B3 /* LKLayoutParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD401FE7B3C700D2F7D8 /* LKLinearLayoutItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010DB19E5B1F500ABA5B3 /* LKLinearLayoutItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD411FE7B3C700D2F7D8 /* LKFlowLayoutItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010C519E5B1F500ABA5B3 /* LKFlowLayoutItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD421FE7B3C700D2F7D8 /* LKStackLayoutItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010E019E5B1F500ABA5B3 /* LKStackLayoutItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD431FE7B3C700D2F7D8 /* LKLinearLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010D919E5B1F500ABA5B3 /* LKLinearLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD441FE7B3C700D2F7D8 /* LKFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010C319E5B1F500ABA5B3 /* LKFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD451FE7B3C700D2F7D8 /* LKStackLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010DE19E5B1F500ABA5B3 /* LKStackLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2661FD461FE7B3C700D2F7D8 /* UIView+LKLayoutItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CEBA8A225539CCA64B1CA39 /* UIView+LKLayoutItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		267CE8D51FE7ADD300FBFCD2 /* LKLayoutLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 267CE8D31FE7ADD300FBFCD2 /* LKLayoutLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		267CE8DA1FE7ADFA00FBFCD2 /* LKGravity.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010C819E5B1F500ABA5B3 /* LKGravity.m */; };
 		267CE8DD1FE7ADFA00FBFCD2 /* LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010CF19E5B1F500ABA5B3 /* LKLayoutItem.m */; };
@@ -362,7 +376,21 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2661FD421FE7B3C700D2F7D8 /* LKStackLayoutItem.h in Headers */,
+				2661FD3F1FE7B3C700D2F7D8 /* LKLayoutParser.h in Headers */,
+				2661FD431FE7B3C700D2F7D8 /* LKLinearLayout.h in Headers */,
+				2661FD441FE7B3C700D2F7D8 /* LKFlowLayout.h in Headers */,
+				2661FD3A1FE7B3C700D2F7D8 /* LKLayoutItem.h in Headers */,
+				2661FD3C1FE7B3C700D2F7D8 /* LKLayoutDelegate.h in Headers */,
+				2661FD451FE7B3C700D2F7D8 /* LKStackLayout.h in Headers */,
+				2661FD3B1FE7B3C700D2F7D8 /* LKLayout.h in Headers */,
+				2661FD391FE7B3C700D2F7D8 /* LKGravity.h in Headers */,
+				2661FD401FE7B3C700D2F7D8 /* LKLinearLayoutItem.h in Headers */,
+				2661FD3D1FE7B3C700D2F7D8 /* LKLayoutOrientation.h in Headers */,
 				267CE8D51FE7ADD300FBFCD2 /* LKLayoutLibrary.h in Headers */,
+				2661FD461FE7B3C700D2F7D8 /* UIView+LKLayoutItem.h in Headers */,
+				2661FD411FE7B3C700D2F7D8 /* LKFlowLayoutItem.h in Headers */,
+				2661FD3E1FE7B3C700D2F7D8 /* LKLayoutView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
