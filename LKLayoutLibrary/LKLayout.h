@@ -224,4 +224,8 @@
  */
 - (CGRect)roundedRect:(CGRect)rect;
 
+#pragma mark - Size
+- (CGSize)size;
+- (CGSize)sizeForLayout:(LKLayout * _Nonnull)layout offset:(UIOffset)offset;
+
 @end

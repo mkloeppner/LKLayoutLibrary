@@ -11,7 +11,7 @@
 
 @interface LKLayoutView<__covariant ObjectType> : UIView
 
-@property (strong, nonatomic) ObjectType _Nullable rootLayout;
+@property (strong, nonatomic) ObjectType _Nonnull rootLayout;
 
 - (instancetype _Nonnull)initWithLayoutNamed:(NSString * _Nonnull)layoutName;
 - (instancetype _Nonnull)initWithFrame:(CGRect)frame layout:(ObjectType _Nonnull)layout;
