@@ -1,6 +1,6 @@
 LKLayoutLibrary
 ================
-![](http://img.shields.io/cocoapods/v/LKLayoutLibrary.svg?style=flat) ![](http://img.shields.io/cocoapods/l/AFNetworking.svg?style=flat) ![](http://img.shields.io/cocoapods/p/AFNetworking.svg?style=flat)
+![](http://img.shields.io/cocoapods/v/LKLayoutLibrary.svg?style=flat) ![](http://img.shields.io/cocoapods/l/LKLayoutLibrary.svg?style=flat) ![](http://img.shields.io/cocoapods/p/LKLayoutLibrary.svg?style=flat)
 
 LKLayoutLibrary has been written to allow iOS developers designing applications with
 dynamic and complex layouts.
