@@ -32,6 +32,11 @@
     [self setNeedsLayout];
 }
 
+- (CGSize)size
+{
+    return [self.rootLayout size];
+}
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];

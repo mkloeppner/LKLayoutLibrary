@@ -384,7 +384,6 @@ describe(@"LKStackLayout", ^{
         expect(subview1).to.equal([layout.items[0] subview]);
         expect(subview2).to.equal([layout.items[1] subview]);
         
-        
     });
     
 });

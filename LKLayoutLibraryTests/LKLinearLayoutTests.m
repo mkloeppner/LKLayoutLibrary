@@ -771,6 +771,87 @@ describe(@"LKLinearLayout", ^{
         
     });
     
+#pragma mark - Caluclate layout size basics horizontally
+    it(@"should calculate contentSize according to items horizontally", ^{
+        
+        layout.orientation = LKLayoutOrientationHorizontal;
+        
+        LKLinearLayoutItem *item1 = [layout addSubview:subview1];
+        item1.size = CGSizeMake(100.0f, 100.0);
+        
+        LKLinearLayoutItem *item2 = [layout addSubview:subview2];
+        item2.size = CGSizeMake(100.0f, 100.0);
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(200.0f);
+        expect(size.height).to.equal(100.0f);
+        
+    });
+    
+#pragma mark - Caluclate layout size basics vertically
+    it(@"should calculate contentSize according to items vertically", ^{
+        
+        layout.orientation = LKLayoutOrientationVertical;
+        
+        LKLinearLayoutItem *item1 = [layout addSubview:subview1];
+        item1.size = CGSizeMake(100.0f, 100.0);
+        
+        LKLinearLayoutItem *item2 = [layout addSubview:subview2];
+        item2.size = CGSizeMake(100.0f, 100.0);
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(100.0f);
+        expect(size.height).to.equal(200.0f);
+        
+    });
+    
+    #pragma mark - Caluclate layout size advanced
+    it(@"should calculate contentSize for sub (vertical -> horizontal) layout", ^{
+        
+        layout.orientation = LKLayoutOrientationVertical;
+        
+        LKLinearLayout *subLayout = [[LKLinearLayout alloc] initWithView:container];
+        subLayout.orientation = LKLayoutOrientationHorizontal;
+        LKLinearLayoutItem *subLayoutItem = [layout addSublayout:subLayout];
+        subLayoutItem.size = CGSizeMake(kLKLayoutItemSizeValueMatchContents, kLKLayoutItemSizeValueMatchContents);
+        
+        LKLinearLayoutItem *item1 = [subLayout addSubview:subview1];
+        item1.size = CGSizeMake(100.0f, 100.0);
+        
+        LKLinearLayoutItem *item2 = [subLayout addSubview:subview2];
+        item2.size = CGSizeMake(100.0f, 100.0);
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(200.0f);
+        expect(size.height).to.equal(100.0f);
+        
+    });
+    
+    it(@"should calculate contentSize for sub (horizontal -> vertical) layout", ^{
+        
+        layout.orientation = LKLayoutOrientationHorizontal;
+        
+        LKLinearLayout *subLayout = [[LKLinearLayout alloc] initWithView:container];
+        subLayout.orientation = LKLayoutOrientationVertical;
+        LKLinearLayoutItem *subLayoutItem = [layout addSublayout:subLayout];
+        subLayoutItem.size = CGSizeMake(kLKLayoutItemSizeValueMatchContents, kLKLayoutItemSizeValueMatchContents);
+        
+        LKLinearLayoutItem *item1 = [subLayout addSubview:subview1];
+        item1.size = CGSizeMake(100.0f, 100.0);
+        
+        LKLinearLayoutItem *item2 = [subLayout addSubview:subview2];
+        item2.size = CGSizeMake(100.0f, 100.0);
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(100.0f);
+        expect(size.height).to.equal(200.0f);
+        
+    });
+    
 });
 
 SpecEnd

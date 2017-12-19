@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "LKLayout.h"
+#import "LKAdaptable.h"
 
-@interface LKLayoutView<__covariant ObjectType> : UIView
+@interface LKLayoutView<__covariant ObjectType> : UIView <LKAdaptable>
 
 @property (strong, nonatomic) ObjectType _Nonnull rootLayout;
 

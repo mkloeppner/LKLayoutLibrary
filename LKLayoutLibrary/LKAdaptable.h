@@ -11,7 +11,7 @@
 
 @protocol LKAdaptable
 
-- (CGSize)size;
+@property (nonatomic, readonly) CGSize size;
 
 @end
 
