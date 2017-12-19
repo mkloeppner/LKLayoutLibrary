@@ -128,6 +128,7 @@
 		267CE8D31FE7ADD300FBFCD2 /* LKLayoutLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKLayoutLibrary.h; sourceTree = "<group>"; };
 		267CE8D41FE7ADD300FBFCD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26B7BFC51FE98106004FC602 /* LKAdaptable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKAdaptable.h; sourceTree = "<group>"; };
+		26B7BFC71FE9D660004FC602 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		286BB19919E5B1700042CD74 /* libLKLayoutLibraryStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLKLayoutLibraryStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		286BB1A419E5B1700042CD74 /* LKLayoutLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKLayoutLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		286BB1A719E5B1700042CD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -227,6 +228,7 @@
 		286BB19019E5B1700042CD74 = {
 			isa = PBXGroup;
 			children = (
+				26B7BFC71FE9D660004FC602 /* .travis.yml */,
 				286BB19B19E5B1700042CD74 /* LKLayoutLibrary */,
 				286BB1A519E5B1700042CD74 /* LKLayoutLibraryTests */,
 				267CE8D21FE7ADD300FBFCD2 /* LKLayoutLibrary */,
