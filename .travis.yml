@@ -2,4 +2,4 @@ language: objective-c
 xcode_workspace: LKLayoutLibrary.xcworkspace # if you're using cocoapods
 xcode_scheme: LKLayoutLibrary
 xcode_sdk: iphonesimulator7.1
-script: xcodebuild -workspace MyAwesomeApp.xcworkspace -scheme LKLayoutLibrary -sdk iphonesimulator7.1 -configuration Debug build test
+script: xcodebuild -workspace LKLayoutLibrary.xcworkspace -scheme LKLayoutLibrary -sdk iphonesimulator7.1 -configuration Debug build test
