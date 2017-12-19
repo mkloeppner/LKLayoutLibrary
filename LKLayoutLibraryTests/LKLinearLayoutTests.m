@@ -789,6 +789,45 @@ describe(@"LKLinearLayout", ^{
         
     });
     
+    it(@"should calculate contentSize according to items horizontally, including spacing of 2 items", ^{
+        
+        layout.orientation = LKLayoutOrientationHorizontal;
+        layout.spacing = 5.0f;
+        
+        LKLinearLayoutItem *item1 = [layout addSubview:subview1];
+        item1.size = CGSizeMake(100.0f, 100.0);
+        
+        LKLinearLayoutItem *item2 = [layout addSubview:subview2];
+        item2.size = CGSizeMake(100.0f, 100.0);
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(205.0f);
+        expect(size.height).to.equal(100.0f);
+        
+    });
+    
+    it(@"should calculate contentSize according to items horizontally, including spacing of 3 items", ^{
+        
+        layout.orientation = LKLayoutOrientationHorizontal;
+        layout.spacing = 5.0f;
+        
+        LKLinearLayoutItem *item1 = [layout addSubview:subview1];
+        item1.size = CGSizeMake(100.0f, 100.0);
+        
+        LKLinearLayoutItem *item2 = [layout addSubview:subview2];
+        item2.size = CGSizeMake(100.0f, 100.0);
+        
+        LKLinearLayoutItem *item3 = [layout addSubview:subview3];
+        item3.size = CGSizeMake(100.0f, 100.0);
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(310.0f);
+        expect(size.height).to.equal(100.0f);
+        
+    });
+    
 #pragma mark - Caluclate layout size basics vertically
     it(@"should calculate contentSize according to items vertically", ^{
         
@@ -804,6 +843,45 @@ describe(@"LKLinearLayout", ^{
         
         expect(size.width).to.equal(100.0f);
         expect(size.height).to.equal(200.0f);
+        
+    });
+    
+    it(@"should calculate contentSize according to items horizontally, including spacing of 2 items", ^{
+        
+        layout.orientation = LKLayoutOrientationVertical;
+        layout.spacing = 5.0f;
+        
+        LKLinearLayoutItem *item1 = [layout addSubview:subview1];
+        item1.size = CGSizeMake(100.0f, 100.0);
+        
+        LKLinearLayoutItem *item2 = [layout addSubview:subview2];
+        item2.size = CGSizeMake(100.0f, 100.0);
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(100.0f);
+        expect(size.height).to.equal(205.0f);
+        
+    });
+    
+    it(@"should calculate contentSize according to items horizontally, including spacing of 3 items", ^{
+        
+        layout.orientation = LKLayoutOrientationVertical;
+        layout.spacing = 5.0f;
+        
+        LKLinearLayoutItem *item1 = [layout addSubview:subview1];
+        item1.size = CGSizeMake(100.0f, 100.0);
+        
+        LKLinearLayoutItem *item2 = [layout addSubview:subview2];
+        item2.size = CGSizeMake(100.0f, 100.0);
+        
+        LKLinearLayoutItem *item3 = [layout addSubview:subview3];
+        item3.size = CGSizeMake(100.0f, 100.0);
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(100.0f);
+        expect(size.height).to.equal(310.0f);
         
     });
     
