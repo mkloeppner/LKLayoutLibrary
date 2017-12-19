@@ -120,7 +120,7 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKFlowLayoutItem);
         if (i < self.items.count - 1) {
             LKFlowLayoutItem *nextItem = self.items[i + 1];
             CGFloat nextItemLength = self.orientation == LKLayoutOrientationHorizontal ? [self horizontalLengthForItem:nextItem] : [self verticalLengthForItem:nextItem];
-            nextItemStartsNewRow = alreadyUsedSpaceForRow + nextItemLength + alreadyUsedSpaceForRow >= totalAvailableLength;
+            nextItemStartsNewRow = alreadyUsedSpaceForRow + nextItemLength >= totalAvailableLength;
         }
         BOOL isLastItem = i == self.items.count - 1; // If its the last item, we have to cover the maximum height
         if (newRowBegins || isLastItem || nextItemStartsNewRow) {
@@ -140,6 +140,9 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKFlowLayoutItem);
     if (width == kLKLayoutItemSizeValueMatchParent) {
         return self.bounds.size.width;
     }
+    if (width == kLKLayoutItemSizeValueMatchContents) {
+        return item.contentSize.width;
+    }
     return width;
 }
 
@@ -148,6 +151,9 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKFlowLayoutItem);
     CGFloat height = item.size.height;
     if (height == kLKLayoutItemSizeValueMatchParent) {
         return self.bounds.size.height;
+    }
+    if (height == kLKLayoutItemSizeValueMatchContents) {
+        return item.contentSize.height;
     }
     return height;
 }

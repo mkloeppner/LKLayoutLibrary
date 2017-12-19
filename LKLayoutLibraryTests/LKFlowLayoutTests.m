@@ -316,7 +316,7 @@ describe(@"LKFlowLayoutTests", ^{
     });
     
     
-    it(@"should layout a smaller item with gravity bottom next to a bigger item which causes a bigger row height with gravity right in a vertical layout", ^{
+    it(@"should layout a smaller item with gravity bottom next to a bigger item which causes a bigger column height with gravity right in a vertical layout", ^{
         
         layout.orientation = LKLayoutOrientationVertical;
         

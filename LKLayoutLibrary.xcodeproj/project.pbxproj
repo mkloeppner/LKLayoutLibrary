@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18BB2D0CE4CB0A09CF69A6CE /* libPods-LKLayoutLibraryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C119F954FF7BC24F27DA0540 /* libPods-LKLayoutLibraryTests.a */; };
 		1CEBA97871292E15812217A0 /* UIView+LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */; };
 		1CEBAF448F3E880370EF021F /* UIView+LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */; };
 		2661FD471FE7B4EF00D2F7D8 /* LKLayoutLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010D019E5B1F500ABA5B3 /* LKLayoutLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +41,7 @@
 		267CE8F11FE7AE0600FBFCD2 /* LKFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010C419E5B1F500ABA5B3 /* LKFlowLayout.m */; };
 		267CE8F31FE7AE0600FBFCD2 /* LKStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010DF19E5B1F500ABA5B3 /* LKStackLayout.m */; };
 		267CE8F41FE7AE2F00FBFCD2 /* UIView+LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */; };
+		26B7BFC61FE98125004FC602 /* LKAdaptable.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B7BFC51FE98106004FC602 /* LKAdaptable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		289010E219E5B1F500ABA5B3 /* LKFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010C419E5B1F500ABA5B3 /* LKFlowLayout.m */; };
 		289010E319E5B1F500ABA5B3 /* LKFlowLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010C619E5B1F500ABA5B3 /* LKFlowLayoutItem.m */; };
 		289010E419E5B1F500ABA5B3 /* LKGravity.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010C819E5B1F500ABA5B3 /* LKGravity.m */; };
@@ -93,7 +95,7 @@
 		28CA472C19E5B8F9000A632C /* LKStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010DF19E5B1F500ABA5B3 /* LKStackLayout.m */; };
 		28CA472D19E5B8F9000A632C /* LKStackLayoutItem.h in Sources */ = {isa = PBXBuildFile; fileRef = 289010E019E5B1F500ABA5B3 /* LKStackLayoutItem.h */; };
 		28CA472E19E5B8F9000A632C /* LKStackLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 289010E119E5B1F500ABA5B3 /* LKStackLayoutItem.m */; };
-		F59ED3192D37CA6FEFF3E1E3 /* libPods-LKLayoutLibraryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C02B4E20370A4D4493279D1A /* libPods-LKLayoutLibraryTests.a */; };
+		4F5322A10427E114F054FF6B /* libPods-LKLayoutLibraryStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2969270247E99A84C60D251 /* libPods-LKLayoutLibraryStatic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,7 @@
 		267CE8D11FE7ADD300FBFCD2 /* LKLayoutLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKLayoutLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		267CE8D31FE7ADD300FBFCD2 /* LKLayoutLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKLayoutLibrary.h; sourceTree = "<group>"; };
 		267CE8D41FE7ADD300FBFCD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26B7BFC51FE98106004FC602 /* LKAdaptable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKAdaptable.h; sourceTree = "<group>"; };
 		286BB19919E5B1700042CD74 /* libLKLayoutLibraryStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLKLayoutLibraryStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		286BB1A419E5B1700042CD74 /* LKLayoutLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKLayoutLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		286BB1A719E5B1700042CD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -172,9 +175,13 @@
 		2890110119E5B37000ABA5B3 /* LKLayoutDelegateImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLayoutDelegateImpl.m; sourceTree = "<group>"; };
 		28CA46EA19E5B747000A632C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28CA473319E5BB8C000A632C /* LKLayoutLibrary.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = LKLayoutLibrary.podspec.json; path = ../LKLayoutLibrary.podspec.json; sourceTree = "<group>"; };
-		8A572D31A18DB80572480AB3 /* Pods-LKLayoutLibraryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKLayoutLibraryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C02B4E20370A4D4493279D1A /* libPods-LKLayoutLibraryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LKLayoutLibraryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F805C64C1CDF4D4AADD74EE9 /* Pods-LKLayoutLibraryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKLayoutLibraryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests.release.xcconfig"; sourceTree = "<group>"; };
+		A05182485FBA4FFD749F174F /* Pods-LKLayoutLibraryStatic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKLayoutLibraryStatic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LKLayoutLibraryStatic/Pods-LKLayoutLibraryStatic.debug.xcconfig"; sourceTree = "<group>"; };
+		A9EB88D2F519B4695079D81E /* Pods-LKLayoutLibraryStatic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKLayoutLibraryStatic.release.xcconfig"; path = "Pods/Target Support Files/Pods-LKLayoutLibraryStatic/Pods-LKLayoutLibraryStatic.release.xcconfig"; sourceTree = "<group>"; };
+		B08F2ADB97C1EEFA8C69D3DE /* Pods-LKLayoutLibraryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKLayoutLibraryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C119F954FF7BC24F27DA0540 /* libPods-LKLayoutLibraryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LKLayoutLibraryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2969270247E99A84C60D251 /* libPods-LKLayoutLibraryStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LKLayoutLibraryStatic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5D3FD8A2E83A554E5CC54C2 /* Pods-LKLayoutLibraryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKLayoutLibraryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD0EAA1B63C62BAAFB218ACC /* libPods-LKLayoutLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LKLayoutLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +198,7 @@
 			files = (
 				289010EF19E5B21700ABA5B3 /* UIKit.framework in Frameworks */,
 				28CA46EC19E5B7B7000A632C /* Foundation.framework in Frameworks */,
+				4F5322A10427E114F054FF6B /* libPods-LKLayoutLibraryStatic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,22 +208,13 @@
 			files = (
 				28CA46E919E5B741000A632C /* UIKit.framework in Frameworks */,
 				28CA46EB19E5B747000A632C /* Foundation.framework in Frameworks */,
-				F59ED3192D37CA6FEFF3E1E3 /* libPods-LKLayoutLibraryTests.a in Frameworks */,
+				18BB2D0CE4CB0A09CF69A6CE /* libPods-LKLayoutLibraryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		254D707050663FEB925DA3F4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8A572D31A18DB80572480AB3 /* Pods-LKLayoutLibraryTests.debug.xcconfig */,
-				F805C64C1CDF4D4AADD74EE9 /* Pods-LKLayoutLibraryTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		267CE8D21FE7ADD300FBFCD2 /* LKLayoutLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,7 +232,7 @@
 				267CE8D21FE7ADD300FBFCD2 /* LKLayoutLibrary */,
 				289010F019E5B22600ABA5B3 /* Frameworks */,
 				286BB19A19E5B1700042CD74 /* Products */,
-				254D707050663FEB925DA3F4 /* Pods */,
+				AF8DB2D3A31FB20AEB199EC3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -272,6 +271,7 @@
 				1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */,
 				1CEBACC9467BF7663E1C33A2 /* UIView_LKLayoutItemInternalAPI.h */,
 				1CEBA8A225539CCA64B1CA39 /* UIView+LKLayoutItem.h */,
+				26B7BFC51FE98106004FC602 /* LKAdaptable.h */,
 			);
 			path = LKLayoutLibrary;
 			sourceTree = "<group>";
@@ -308,7 +308,9 @@
 				28CA46EA19E5B747000A632C /* Foundation.framework */,
 				289010F119E5B23D00ABA5B3 /* QuartzCore.framework */,
 				289010EE19E5B21700ABA5B3 /* UIKit.framework */,
-				C02B4E20370A4D4493279D1A /* libPods-LKLayoutLibraryTests.a */,
+				CD0EAA1B63C62BAAFB218ACC /* libPods-LKLayoutLibrary.a */,
+				C119F954FF7BC24F27DA0540 /* libPods-LKLayoutLibraryTests.a */,
+				C2969270247E99A84C60D251 /* libPods-LKLayoutLibraryStatic.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -373,6 +375,17 @@
 			name = Parser;
 			sourceTree = "<group>";
 		};
+		AF8DB2D3A31FB20AEB199EC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B08F2ADB97C1EEFA8C69D3DE /* Pods-LKLayoutLibraryTests.debug.xcconfig */,
+				C5D3FD8A2E83A554E5CC54C2 /* Pods-LKLayoutLibraryTests.release.xcconfig */,
+				A05182485FBA4FFD749F174F /* Pods-LKLayoutLibraryStatic.debug.xcconfig */,
+				A9EB88D2F519B4695079D81E /* Pods-LKLayoutLibraryStatic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -388,6 +401,7 @@
 				2661FD521FE7B4EF00D2F7D8 /* LKLinearLayoutItem.h in Headers */,
 				2661FD481FE7B4EF00D2F7D8 /* LKGravity.h in Headers */,
 				2661FD571FE7B4EF00D2F7D8 /* LKStackLayout.h in Headers */,
+				26B7BFC61FE98125004FC602 /* LKAdaptable.h in Headers */,
 				2661FD4F1FE7B4EF00D2F7D8 /* LKLayoutOrientation.h in Headers */,
 				2661FD551FE7B4EF00D2F7D8 /* LKLinearLayout.h in Headers */,
 				2661FD4D1FE7B4EF00D2F7D8 /* LKCGRectAdditions.h in Headers */,
@@ -427,9 +441,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 286BB1AA19E5B1700042CD74 /* Build configuration list for PBXNativeTarget "LKLayoutLibraryStatic" */;
 			buildPhases = (
+				73B48DB71BEBC2355FFD15F4 /* [CP] Check Pods Manifest.lock */,
 				286BB19519E5B1700042CD74 /* Sources */,
 				286BB19619E5B1700042CD74 /* Frameworks */,
 				286BB19719E5B1700042CD74 /* CopyFiles */,
+				0F5D283637E3F8F08DD89FC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -444,11 +460,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 286BB1AD19E5B1700042CD74 /* Build configuration list for PBXNativeTarget "LKLayoutLibraryTests" */;
 			buildPhases = (
-				CAFF6A7E14276151F8275BC3 /* Check Pods Manifest.lock */,
+				15198AB4B194126AF33472E9 /* [CP] Check Pods Manifest.lock */,
 				286BB1A019E5B1700042CD74 /* Sources */,
 				286BB1A119E5B1700042CD74 /* Frameworks */,
 				286BB1A219E5B1700042CD74 /* Resources */,
-				A7B6F2DA6D32E8A2D4D201B4 /* Copy Pods Resources */,
+				9DACA19A1355EE06A0A4B5E6 /* [CP] Embed Pods Frameworks */,
+				EB3A4E6B3619E0D599F8E592 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -519,34 +536,79 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A7B6F2DA6D32E8A2D4D201B4 /* Copy Pods Resources */ = {
+		0F5D283637E3F8F08DD89FC0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LKLayoutLibraryStatic/Pods-LKLayoutLibraryStatic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15198AB4B194126AF33472E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		73B48DB71BEBC2355FFD15F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9DACA19A1355EE06A0A4B5E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB3A4E6B3619E0D599F8E592 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LKLayoutLibraryTests/Pods-LKLayoutLibraryTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CAFF6A7E14276151F8275BC3 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -805,6 +867,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -812,6 +875,7 @@
 		};
 		286BB1AB19E5B1700042CD74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A05182485FBA4FFD749F174F /* Pods-LKLayoutLibraryStatic.debug.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -822,6 +886,7 @@
 		};
 		286BB1AC19E5B1700042CD74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9EB88D2F519B4695079D81E /* Pods-LKLayoutLibraryStatic.release.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -832,7 +897,7 @@
 		};
 		286BB1AE19E5B1700042CD74 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A572D31A18DB80572480AB3 /* Pods-LKLayoutLibraryTests.debug.xcconfig */;
+			baseConfigurationReference = B08F2ADB97C1EEFA8C69D3DE /* Pods-LKLayoutLibraryTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -842,38 +907,28 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Expecta\"",
-					"\"${PODS_ROOT}/Headers/Public/OCHamcrest\"",
-					"\"${PODS_ROOT}/Headers/Public/OCMockito\"",
-					"\"${PODS_ROOT}/Headers/Public/Specta\"",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = LKLayoutLibraryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		286BB1AF19E5B1700042CD74 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F805C64C1CDF4D4AADD74EE9 /* Pods-LKLayoutLibraryTests.release.xcconfig */;
+			baseConfigurationReference = C5D3FD8A2E83A554E5CC54C2 /* Pods-LKLayoutLibraryTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Expecta\"",
-					"\"${PODS_ROOT}/Headers/Public/OCHamcrest\"",
-					"\"${PODS_ROOT}/Headers/Public/OCMockito\"",
-					"\"${PODS_ROOT}/Headers/Public/Specta\"",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = LKLayoutLibraryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

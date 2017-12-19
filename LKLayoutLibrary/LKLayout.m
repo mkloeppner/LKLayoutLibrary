@@ -215,15 +215,14 @@
 }
 
 - (CGSize)sizeForLayout:(LKLayout *)layout offset:(UIOffset)offset {
-    LKLayoutItem *lastItem = [self.items lastObject];
+    LKLayoutItem *lastItem = [layout.items lastObject];
     if (lastItem.subview) {
         [layout layout];
         return CGSizeMake(lastItem.subview.frame.origin.x + lastItem.subview.frame.size.width + self.margin.bottom,
                           lastItem.subview.frame.origin.y + lastItem.subview.frame.size.height + self.margin.right);
     } else if (lastItem.sublayout) {
         [layout layout];
-        return [self sizeForLayout:lastItem.sublayout offset:UIOffsetMake(layout.margin.left + layout.margin.right,
-                                                                          layout.margin.top + layout.margin.bottom)];
+        return [self sizeForLayout:lastItem.sublayout offset:UIOffsetZero];
     } else {
         return CGSizeMake(0, 0);
     }

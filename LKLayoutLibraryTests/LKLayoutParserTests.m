@@ -8,6 +8,7 @@
 
 #import "Specta.h"
 #import "LKLayout.h"
+#import "LKLinearLayout.h"
 
 #define EXP_SHORTHAND
 #import "Expecta.h"

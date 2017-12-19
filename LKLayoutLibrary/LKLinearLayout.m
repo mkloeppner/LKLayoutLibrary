@@ -119,6 +119,11 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
     return [self lengthForSize:self.currentItem.size] == kLKLayoutItemSizeValueMatchParent;
 }
 
+- (BOOL)isCurrentItemAMatchContentsItem
+{
+    return [self lengthForSize:self.currentItem.size] == kLKLayoutItemSizeValueMatchContents;
+}
+
 - (void)increaseAlreadyUsedLengthByParentContentSize {
     self.alreadyUsedLength += [self lengthForSize:self.contentRect.size];
 }
@@ -174,6 +179,8 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
         [self setCurrentItemLengthByWeight];
     } else if ([self isCurrentItemAMatchParentItem]) {
         [self setCurrentItemLengthByParentContentLength];
+    } else if ([self isCurrentItemAMatchContentsItem]) {
+        [self setCurrentItemLengthByContentSize];
     } else {
         [self setCurrentItemLengthByItemsFixedSize];
     }
@@ -205,6 +212,11 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 - (void)setCurrentItemLengthByItemsFixedSize
 {
     self.currentItemLength = [self lengthForSize:self.currentItem.size];
+}
+
+- (void)setCurrentItemLengthByContentSize
+{
+    self.currentItemLength = [self lengthForSize:self.currentItem.contentSize];
 }
 
 - (CGRect)currentItemOuterRectForHorizontalOrientation

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LKGravity.h"
+#import "LKAdaptable.h"
 
 @class LKLayout;
 
@@ -15,6 +16,7 @@
  * Specifies that the layout item view should match the parent views or parent layouts size.
  */
 FOUNDATION_EXPORT const CGFloat kLKLayoutItemSizeValueMatchParent;
+FOUNDATION_EXPORT const CGFloat kLKLayoutItemSizeValueMatchContents;
 
 /**
  * LKLayoutItem contains all the necessary information for layouts in order to perform its layout implementation.
@@ -48,6 +50,8 @@ FOUNDATION_EXPORT const CGFloat kLKLayoutItemSizeValueMatchParent;
  */
 @property (assign, nonatomic) CGSize size;
 
+@property (nonatomic, readonly) CGSize contentSize;
+
 /**
  * Ensures a margin around the layout items view. 
  */
@@ -65,7 +69,7 @@ FOUNDATION_EXPORT const CGFloat kLKLayoutItemSizeValueMatchParent;
  *
  * Use the property which instance is not nil
  */
-@property (strong, nonatomic, readonly) UIView * __nullable subview;
+@property (strong, nonatomic, readonly) UIView * _Nullable subview;
 @property (strong, nonatomic, readonly) LKLayout * __nullable sublayout;
 
 /**

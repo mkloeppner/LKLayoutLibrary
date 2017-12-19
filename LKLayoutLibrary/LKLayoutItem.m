@@ -10,6 +10,7 @@
 #import "LKLayout.h"
 
 const CGFloat kLKLayoutItemSizeValueMatchParent = -1.0f;
+const CGFloat kLKLayoutItemSizeValueMatchContents = -2.0f;
 
 @interface LKLayout (APIAccessor)
 
@@ -72,16 +73,27 @@ const CGFloat kLKLayoutItemSizeValueMatchParent = -1.0f;
     }
 }
 
+- (CGSize)contentSize {
+    if (self.sublayout) {
+        return [self.sublayout size];
+    } else if ([self.subview conformsToProtocol:@protocol(LKAdaptable)]) {
+        return [(id<LKAdaptable>)self.subview size];
+    } else {
+        [NSException raise:@"MKFlowLayoutInvalidStateException" format:@"Layout item tries to match content size but view of class %@ does not conform to LKAdaptable", self.subview.class];
+    }
+    return CGSizeZero;
+}
+
 - (void)applyPositionWithinLayoutFrame:(CGRect)itemOuterRect
 {
     CGRect marginRect = UIEdgeInsetsInsetRect(itemOuterRect, self.padding);
     
     // Apply items size value if beeing set
     CGRect itemRect = itemOuterRect; // Take the outer rect without margin applied to prevent applying margin twice
-    if (self.size.width != kLKLayoutItemSizeValueMatchParent) {
+    if (self.size.width >= 0) {
         itemRect.size.width = self.size.width;
     }
-    if (self.size.height != kLKLayoutItemSizeValueMatchParent) {
+    if (self.size.height >= 0) {
         itemRect.size.height = self.size.height;
     }
     
