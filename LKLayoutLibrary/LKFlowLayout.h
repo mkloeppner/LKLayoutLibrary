@@ -16,7 +16,7 @@
  * The distinction if the layout tries to fill either rows or column is made by orientation.
  *
  */
-@interface LKFlowLayout : LKLayout
+@interface LKFlowLayout : LKLayout <LKAdaptable>
 
 DECLARE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKFlowLayoutItem);
 

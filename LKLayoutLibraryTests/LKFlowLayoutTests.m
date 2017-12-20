@@ -670,22 +670,139 @@ describe(@"LKFlowLayoutTests", ^{
         
     });
     
-    it(@"should throw an exception of it contains a view with a size that never matches the available space", ^{
-        
-        container = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 100.0f, 100.0f)];
-        
-        layout = [[LKFlowLayout alloc] initWithView:container];
-        layout.orientation = LKLayoutOrientationHorizontal;
+    it(@"should calculate the size of its contents", ^{
         
         LKFlowLayoutItem *item = [layout addSubview:view1];
-        item.size = CGSizeMake(150.0f, 100.0f); // Never fits within the container
+        item.size = CGSizeMake(10.0f, 10.0f);
         
-        expect(^{
-             [layout layout];
-        }).to.raise(@"MKFlowLayoutInvalidStateException");
-
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(10.0);
+        expect(size.height).to.equal(10.0);
         
     });
+    
+    it(@"should calculate the size of its contents even if breaks for line horizontally for single row", ^{
+        
+        container.frame = CGRectMake(0.0f, 0.0f, 100.0f, 100.0f);
+        
+        for (int i = 0; i < 20; i++) {
+            LKFlowLayoutItem *item = [layout addSubview:view1];
+            item.size = CGSizeMake(10.0f, 10.0f);
+        }
+            
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(100.0);
+        expect(size.height).to.equal(20.0);
+        
+    });
+    
+    it(@"should calculate the size of its contents even if breaks for line vertically for single column", ^{
+        
+        container.frame = CGRectMake(0.0f, 0.0f, 100.0f, 100.0f);
+        layout.orientation = LKLayoutOrientationVertical;
+        
+        for (int i = 0; i < 20; i++) {
+            LKFlowLayoutItem *item = [layout addSubview:view1];
+            item.size = CGSizeMake(10.0f, 10.0f);
+        }
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(20.0);
+        expect(size.height).to.equal(100.0);
+        
+    });
+    
+    it(@"should calculate the size of its contents even if breaks for line horizontally for multiple rows", ^{
+        
+        container.frame = CGRectMake(0.0f, 0.0f, 100.0f, 100.0f);
+        
+        for (int i = 0; i < 30; i++) {
+            LKFlowLayoutItem *item = [layout addSubview:view1];
+            item.size = CGSizeMake(10.0f, 10.0f);
+        }
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(100.0);
+        expect(size.height).to.equal(30.0);
+        
+    });
+    
+    it(@"should calculate the size of its contents even if breaks for line vertically for multiple columns", ^{
+        
+        container.frame = CGRectMake(0.0f, 0.0f, 100.0f, 100.0f);
+        layout.orientation = LKLayoutOrientationVertical;
+        
+        for (int i = 0; i < 30; i++) {
+            LKFlowLayoutItem *item = [layout addSubview:view1];
+            item.size = CGSizeMake(10.0f, 10.0f);
+        }
+        
+        [layout layout];
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(30.0);
+        expect(size.height).to.equal(100.0);
+        
+    });
+    
+    it(@"should calculate the size of its contents even if breaks for line vertically for multiple columns and add margin if exists", ^{
+        
+        container.frame = CGRectMake(0.0f, 0.0f, 100.0f, 100.0f);
+        layout.orientation = LKLayoutOrientationHorizontal;
+        layout.margin = UIEdgeInsetsMake(10.0f, 10.0f, 10.0f, 10.0f);
+        
+        for (int i = 0; i < 30; i++) {
+            LKFlowLayoutItem *item = [layout addSubview:view1];
+            item.size = CGSizeMake(10.0f, 10.0f);
+        }
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(100.0f);
+        expect(size.height).to.equal(60.0f);
+        
+    });
+    
+    it(@"should calculate the size of its contents when nested", ^{
+       
+        container.frame = CGRectMake(0.0f, 0.0f, 100.0f, 100.0f);
+        
+        LKFlowLayout *flowLayout = [[LKFlowLayout alloc] initWithView:container];
+        LKFlowLayoutItem *flowLayoutItem = [layout addSublayout:flowLayout];
+        flowLayoutItem.size = CGSizeMake(kLKLayoutItemSizeValueMatchContents, kLKLayoutItemSizeValueMatchContents);
+        
+        flowLayout.orientation = LKLayoutOrientationHorizontal;
+        flowLayout.margin = UIEdgeInsetsMake(10.0f, 10.0f, 10.0f, 10.0f);
+        
+        for (int i = 0; i < 30; i++) {
+            LKFlowLayoutItem *item = [flowLayout addSubview:view1];
+            item.size = CGSizeMake(10.0f, 10.0f);
+        }
+        
+        LKFlowLayout *flowLayout2 = [[LKFlowLayout alloc] initWithView:container];
+        LKFlowLayoutItem *flowLayoutItem2 = [layout addSublayout:flowLayout2];
+        flowLayoutItem2.size = CGSizeMake(kLKLayoutItemSizeValueMatchContents, kLKLayoutItemSizeValueMatchContents);
+        
+        flowLayout2.orientation = LKLayoutOrientationHorizontal;
+        flowLayout2.margin = UIEdgeInsetsMake(10.0f, 10.0f, 10.0f, 10.0f);
+        
+        for (int i = 0; i < 30; i++) {
+            LKFlowLayoutItem *item = [flowLayout2 addSubview:view1];
+            item.size = CGSizeMake(10.0f, 10.0f);
+        }
+        
+        CGSize size = [layout size];
+        
+        expect(size.width).to.equal(100.0f);
+        expect(size.height).to.equal(120.0f);
+        
+    });
+    
+    
     
 });
 

@@ -257,4 +257,27 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
     return 0.0f;
 }
 
+- (CGSize)sizeForLayout:(LKLayout *)layout lastItem:(LKLayoutItem *)lastItem offset:(UIOffset)offset
+{
+    CGFloat x = 0.0f;
+    CGFloat y = 0.0f;
+    
+    for (LKLinearLayoutItem *item in layout.items) {
+        CGSize size = item.contentSize;
+        if (self.orientation == LKLayoutOrientationHorizontal) {
+            x += size.width;
+            y = MAX(y, size.height );
+        } else {
+            x = MAX(x, size.width );
+            y += size.height;
+        }
+    }
+    
+    x += (self.orientation == LKLayoutOrientationHorizontal ? self.spacing : 0.0f) * (layout.items.count - 1);
+    y += (self.orientation == LKLayoutOrientationVertical ? self.spacing : 0.0f) * (layout.items.count - 1);
+    
+    return CGSizeMake(x + self.margin.left + self.margin.right,
+                      y + self.margin.top + self.margin.bottom);
+}
+
 @end

@@ -10,6 +10,7 @@
 		18BB2D0CE4CB0A09CF69A6CE /* libPods-LKLayoutLibraryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C119F954FF7BC24F27DA0540 /* libPods-LKLayoutLibraryTests.a */; };
 		1CEBA97871292E15812217A0 /* UIView+LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */; };
 		1CEBAF448F3E880370EF021F /* UIView+LKLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */; };
+		262BC3BE1FEC0546003DF80A /* LKLayoutIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 262BC3BD1FEC0546003DF80A /* LKLayoutIntegrationTests.m */; };
 		2661FD471FE7B4EF00D2F7D8 /* LKLayoutLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010D019E5B1F500ABA5B3 /* LKLayoutLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2661FD481FE7B4EF00D2F7D8 /* LKGravity.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010C719E5B1F500ABA5B3 /* LKGravity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2661FD491FE7B4EF00D2F7D8 /* LKLayoutItem_SubclassAccessors.h in Headers */ = {isa = PBXBuildFile; fileRef = 289010CD19E5B1F500ABA5B3 /* LKLayoutItem_SubclassAccessors.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -124,6 +125,7 @@
 		1CEBA8A225539CCA64B1CA39 /* UIView+LKLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LKLayoutItem.h"; sourceTree = "<group>"; };
 		1CEBACC9467BF7663E1C33A2 /* UIView_LKLayoutItemInternalAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_LKLayoutItemInternalAPI.h; sourceTree = "<group>"; };
 		1CEBAEFC5C4AD3968628F9EA /* UIView+LKLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LKLayoutItem.m"; sourceTree = "<group>"; };
+		262BC3BD1FEC0546003DF80A /* LKLayoutIntegrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKLayoutIntegrationTests.m; sourceTree = "<group>"; };
 		267CE8D11FE7ADD300FBFCD2 /* LKLayoutLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKLayoutLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		267CE8D31FE7ADD300FBFCD2 /* LKLayoutLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKLayoutLibrary.h; sourceTree = "<group>"; };
 		267CE8D41FE7ADD300FBFCD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				289010FC19E5B37000ABA5B3 /* LKLayoutTests.m */,
 				289010FD19E5B37000ABA5B3 /* LKLinearLayoutTests.m */,
 				289010FE19E5B37000ABA5B3 /* LKStackLayoutTests.m */,
+				262BC3BD1FEC0546003DF80A /* LKLayoutIntegrationTests.m */,
 				289010FF19E5B37000ABA5B3 /* MockObjects */,
 				286BB1A619E5B1700042CD74 /* Supporting Files */,
 			);
@@ -691,6 +694,7 @@
 				2890110C19E5B37000ABA5B3 /* LKLinearLayoutTests.m in Sources */,
 				2890110B19E5B37000ABA5B3 /* LKLayoutTests.m in Sources */,
 				2890110719E5B37000ABA5B3 /* LKLayoutItemTestsSpec.m in Sources */,
+				262BC3BE1FEC0546003DF80A /* LKLayoutIntegrationTests.m in Sources */,
 				2890110419E5B37000ABA5B3 /* LKFlowLayoutTests.m in Sources */,
 				2890110619E5B37000ABA5B3 /* LKLayoutItemTests.m in Sources */,
 				2890110919E5B37000ABA5B3 /* LKLayoutLibraryTests.m in Sources */,

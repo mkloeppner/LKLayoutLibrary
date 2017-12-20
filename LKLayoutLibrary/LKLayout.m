@@ -142,7 +142,7 @@
     
     [self layoutBounds:bounds];
     
-    self.bounds = CGRectMake(0.0f, 0.0f, 0.0f, 0.0f);
+    // self.bounds = CGRectMake(0.0f, 0.0f, 0.0f, 0.0f);
 }
 
 - (void)layoutBounds:(CGRect)bounds
@@ -211,22 +211,27 @@
 
 #pragma mark - Size calculations
 - (CGSize)size {
+    [self layout];
     return [self sizeForLayout:self offset:UIOffsetZero];
 }
 
 - (CGSize)sizeForLayout:(LKLayout *)layout offset:(UIOffset)offset {
     LKLayoutItem *lastItem = [layout.items lastObject];
-    if (lastItem.subview) {
-        [layout layout];
-        return CGSizeMake(lastItem.subview.frame.origin.x + lastItem.subview.frame.size.width + self.margin.bottom,
-                          lastItem.subview.frame.origin.y + lastItem.subview.frame.size.height + self.margin.right);
-    } else if (lastItem.sublayout) {
-        [layout layout];
-        return [self sizeForLayout:lastItem.sublayout offset:UIOffsetZero];
-    } else {
-        return CGSizeMake(0, 0);
-    }
+    return [layout sizeForLayout:layout lastItem:lastItem offset:offset];
 }
 
+- (CGSize)sizeForLayout:(LKLayout *)layout lastItem:(LKLayoutItem *)lastItem offset:(UIOffset)offset
+{
+    if ([lastItem.subview conformsToProtocol:@protocol(LKAdaptable)]) {
+        return [(id<LKAdaptable>)lastItem.subview size];
+    }
+    
+    return CGSizeMake(lastItem.subview.frame.origin.x +
+                      lastItem.subview.frame.size.width +
+                      self.margin.right,
+                      lastItem.subview.frame.origin.y +
+                      lastItem.subview.frame.size.height +
+                      self.margin.bottom);
+}
 
 @end

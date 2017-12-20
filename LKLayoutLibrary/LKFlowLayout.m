@@ -108,10 +108,6 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKFlowLayoutItem);
         CGFloat currentHeight = self.orientation == LKLayoutOrientationHorizontal ? [self verticalLengthForItem:item] : [self horizontalLengthForItem:item];
         CGFloat currentOrientationSpacing  = self.orientation == LKLayoutOrientationHorizontal ? self.horizontalSpacing : self.verticalSpacing;
         
-        if (currentLength > totalAvailableLength) {
-            [NSException raise:@"MKFlowLayoutInvalidStateException" format:@"Layout contains a layout item that exceeds the available state at index %lu. In a flow layout the maximum width or height needs to be within either the available width or height depending on layout direction. For example a flow layout with horizontal direction inserts a line break before an item draws outside the available space. If an item is bigger in size than the related value, it can not be drawn at any time which is a inconsistent state.", (unsigned long)i];
-        }
-        
         maximum = MAX(maximum, currentHeight);
         alreadyUsedSpaceForRow += currentLength + currentOrientationSpacing;
         
@@ -120,7 +116,7 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKFlowLayoutItem);
         if (i < self.items.count - 1) {
             LKFlowLayoutItem *nextItem = self.items[i + 1];
             CGFloat nextItemLength = self.orientation == LKLayoutOrientationHorizontal ? [self horizontalLengthForItem:nextItem] : [self verticalLengthForItem:nextItem];
-            nextItemStartsNewRow = alreadyUsedSpaceForRow + nextItemLength >= totalAvailableLength;
+            nextItemStartsNewRow = alreadyUsedSpaceForRow + nextItemLength > totalAvailableLength;
         }
         BOOL isLastItem = i == self.items.count - 1; // If its the last item, we have to cover the maximum height
         if (newRowBegins || isLastItem || nextItemStartsNewRow) {
@@ -156,6 +152,39 @@ SYNTHESIZE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKFlowLayoutItem);
         return item.contentSize.height;
     }
     return height;
+}
+
+- (CGSize)sizeForLayout:(LKLayout *)layout lastItem:(LKLayoutItem *)lastItem offset:(UIOffset)offset
+{
+    CGFloat width = self.bounds.size.width;
+    CGFloat height = self.bounds.size.height;
+    
+    CGFloat totalHeight = 0.0f;
+    NSArray *rowHeights = [self preCalculateRowHeights];
+    
+    if (rowHeights.count == 1) {
+        UIView *lastView = layout.items.lastObject.subview;
+        if ([lastItem conformsToProtocol:@protocol(LKAdaptable)]) {
+            return [(id<LKAdaptable>)lastView size];
+        }
+        
+        CGRect lastFrame = layout.items.lastObject.subview.frame;
+        return CGSizeMake(lastFrame.origin.x + lastFrame.size.width + self.margin.right,
+                          lastFrame.origin.y + lastFrame.size.height + self.margin.bottom);
+    }
+    
+    for (NSNumber *number in rowHeights) {
+        totalHeight += number.floatValue;
+    }
+    totalHeight += (self.orientation == LKLayoutOrientationHorizontal ? self.horizontalSpacing : self.verticalSpacing) * (rowHeights.count - 1);
+    
+    if (self.orientation == LKLayoutOrientationHorizontal) {
+        height = totalHeight;
+    } else {
+        width = totalHeight;
+    }
+    
+    return CGSizeMake(width + self.margin.left + self.margin.right, height + self.margin.top + self.margin.bottom);
 }
 
 @end

@@ -227,5 +227,6 @@
 #pragma mark - Size
 - (CGSize)size;
 - (CGSize)sizeForLayout:(LKLayout * _Nonnull)layout offset:(UIOffset)offset;
+- (CGSize)sizeForLayout:(LKLayout *)layout lastItem:(LKLayoutItem *)lastItem offset:(UIOffset)offset;
 
 @end

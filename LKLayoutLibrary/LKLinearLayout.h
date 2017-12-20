@@ -12,7 +12,7 @@
 /**
  *  A linear layout places all its children view side by side in a specified direction.
  */
-@interface LKLinearLayout : LKLayout
+@interface LKLinearLayout : LKLayout <LKAdaptable>
 
 DECLARE_LAYOUT_ITEM_ACCESSORS_WITH_CLASS_NAME(LKLinearLayoutItem)
 

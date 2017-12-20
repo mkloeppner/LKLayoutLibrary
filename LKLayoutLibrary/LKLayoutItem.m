@@ -79,7 +79,7 @@ const CGFloat kLKLayoutItemSizeValueMatchContents = -2.0f;
     } else if ([self.subview conformsToProtocol:@protocol(LKAdaptable)]) {
         return [(id<LKAdaptable>)self.subview size];
     } else {
-        [NSException raise:@"MKFlowLayoutInvalidStateException" format:@"Layout item tries to match content size but view of class %@ does not conform to LKAdaptable", self.subview.class];
+        return self.size;
     }
     return CGSizeZero;
 }
