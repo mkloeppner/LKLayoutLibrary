@@ -1,20 +1,12 @@
 language: objective-c
+osx_image: xcode8.2
+#xcode_workspace: LKLayoutLibrary.xcworkspace
+#xcode_scheme: LKLayoutLibrary
+#xcode_sdk: iphonesimulator
+
+script:
+- set -o pipefail && xcodebuild -workspace 'LKLayoutLibrary.xcworkspace' -scheme 'LKLayoutLibrary' -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 6' clean test build | xcpretty -c
 
 before_install:
-- brew update
-- if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
-- gem install cocoapods --no-rdoc --no-ri --no-document --quiet
-
-before_script:
-- export LANG=en_US.UTF-8
-
-# Path to the Xcode workspace.
-#If you're using a project, use xcode_project: ...
-xcode_workspace: LKLayoutLibrary.xcworkspace
-
-# Define the Xcode scheme to use. Make sure the scheme is
-# "Shared" (in Xcode, menu Product > Scheme > Manage Schemes).
-xcode_scheme: LKLayoutLibrary
-
-# Instruct Travis to run tests in the simulator instead of a real device
-xcode_sdk: iphonesimulator
+  - brew update; brew update
+  - brew outdated xctool || brew upgrade xctool
