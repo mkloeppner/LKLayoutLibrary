@@ -1,10 +1,12 @@
+language: objective-c
+
 before_install:
-    brew update
-    if brew outdated | grep qx xctool; then brew upgrade xctool; fi
-    gem install cocoapods nordoc nori nodocument quiet
+- brew update
+- if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
+- gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 
 before_script:
-    export LANG=en_US.UTF8
+- export LANG=en_US.UTF-8
 
 # Path to the Xcode workspace.
 #If you're using a project, use xcode_project: ...
