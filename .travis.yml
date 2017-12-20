@@ -1,5 +1,18 @@
-language: objective-c
-xcode_workspace: LKLayoutLibrary.xcworkspace # if you're using cocoapods
+before_install:
+    brew update
+    if brew outdated | grep qx xctool; then brew upgrade xctool; fi
+    gem install cocoapods nordoc nori nodocument quiet
+
+before_script:
+    export LANG=en_US.UTF8
+
+# Path to the Xcode workspace.
+#If you're using a project, use xcode_project: ...
+xcode_workspace: LKLayoutLibrary.xcworkspace
+
+# Define the Xcode scheme to use. Make sure the scheme is
+# "Shared" (in Xcode, menu Product > Scheme > Manage Schemes).
 xcode_scheme: LKLayoutLibrary
-xcode_sdk: iphonesimulator7.1
-script: xcodebuild -workspace LKLayoutLibrary.xcworkspace -scheme LKLayoutLibrary -sdk iphonesimulator7.1 -configuration Debug build test
+
+# Instruct Travis to run tests in the simulator instead of a real device
+xcode_sdk: iphonesimulator
